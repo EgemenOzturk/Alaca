@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using geyikgames.unity.popup;
+using geyikgames.manager;
 
 public class MenuUIController : MonoBehaviour
 {
     [SerializeField] private Sprite testBackground;
+    [SerializeField] private GameObject can;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        _ = Manager.Instance;
+    }
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,11 +25,11 @@ public class MenuUIController : MonoBehaviour
         
     }
 
-    public void OpenAchievements()
+    public void OpenCodex()
     {
         PopupController.Instance.Open<CodexPopup>("CodexPopup", (popup) =>
         {
-            popup.Initialize(testBackground);
+            popup.Initialize();
         });
     }
 }

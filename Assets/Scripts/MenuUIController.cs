@@ -41,6 +41,14 @@ public class MenuUIController : MonoBehaviour
         });
     }
 
+    public void OpenAchievements()
+    {
+        PopupController.Instance.Open<AchievementsPopup>("Achievements", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
+
     public void OpenCreative()
     {
         PopupController.Instance.Open<CreativePopup>("StartCreative", (popup) =>

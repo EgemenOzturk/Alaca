@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316193603635518974}
   - component: {fileID: 5287009894527743609}
-  - component: {fileID: 7010593984409127457}
+  - component: {fileID: 5240082906879633016}
   m_Layer: 5
   m_Name: StartStory
   m_TagString: Untagged
@@ -66,7 +66,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &7010593984409127457
+--- !u!114 &5240082906879633016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 316193603635518945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2aec6a322452c46a1b1962e0c9ef2f, type: 3}
+  m_Script: {fileID: 11500000, guid: aa98efe740fcca54f8e11f7f12e94755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &731716965452643438
@@ -277,8 +277,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7010593984409127457}
-        m_TargetAssemblyTypeName: geyikgames.popup.CodexPopup, Assembly-CSharp
+      - m_Target: {fileID: 5240082906879633016}
+        m_TargetAssemblyTypeName: geyikgames.unity.popup.StoryPopup, Assembly-CSharp
         m_MethodName: Clicked
         m_Mode: 3
         m_Arguments:
@@ -651,14 +651,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7010593984409127457}
-        m_TargetAssemblyTypeName: geyikgames.popup.CodexPopup, Assembly-CSharp
+      - m_Target: {fileID: 5240082906879633016}
+        m_TargetAssemblyTypeName: geyikgames.unity.popup.StoryPopup, Assembly-CSharp
         m_MethodName: Clicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1022,14 +1022,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7010593984409127457}
-        m_TargetAssemblyTypeName: geyikgames.popup.CodexPopup, Assembly-CSharp
+      - m_Target: {fileID: 5240082906879633016}
+        m_TargetAssemblyTypeName: geyikgames.unity.popup.StoryPopup, Assembly-CSharp
         m_MethodName: Clicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

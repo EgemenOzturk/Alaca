@@ -14,6 +14,7 @@ namespace geyikgames.unity.popup
         public void Initialize()
         {
             clickedAt = 0;
+            textRenewable.SetActive(true);
             textNonRenewable.SetActive(false);
         }
 

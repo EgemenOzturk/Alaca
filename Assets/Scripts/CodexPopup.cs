@@ -7,8 +7,14 @@ namespace geyikgames.unity.popup
 {
     public class CodexPopup : Popup
     {
+        [SerializeField] private GameObject textRenewable;
+        [SerializeField] private GameObject textNonRenewable;
+        private int clickedAt;
+
         public void Initialize()
         {
+            clickedAt = 0;
+            textNonRenewable.SetActive(false);
         }
 
         public override void Opening()
@@ -45,6 +51,19 @@ namespace geyikgames.unity.popup
             base.Clicked(action);
 
             Debug.Log("Click event. Action: " + action);
+
+            if(action == 1 && clickedAt % 2 == 0)
+            {
+                textNonRenewable.SetActive(true);
+                textRenewable.SetActive(false);
+                clickedAt++;
+            }
+            else if (action == 1 && clickedAt % 2 == 1)
+            {
+                textNonRenewable.SetActive(false);
+                textRenewable.SetActive(true);
+                clickedAt++;
+            }
         }
 
         /*

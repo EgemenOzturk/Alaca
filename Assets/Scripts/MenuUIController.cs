@@ -35,7 +35,7 @@ public class MenuUIController : MonoBehaviour
 
     public void OpenStory()
     {
-        PopupController.Instance.Open<CodexPopup>("StartStory", (popup) =>
+        PopupController.Instance.Open<StoryPopup>("StartStory", (popup) =>
         {
             popup.Initialize();
         });
@@ -43,7 +43,7 @@ public class MenuUIController : MonoBehaviour
 
     public void OpenCreative()
     {
-        PopupController.Instance.Open<CodexPopup>("StartCreative", (popup) =>
+        PopupController.Instance.Open<CreativePopup>("StartCreative", (popup) =>
         {
             popup.Initialize();
         });

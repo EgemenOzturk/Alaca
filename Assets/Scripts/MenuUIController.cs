@@ -32,4 +32,20 @@ public class MenuUIController : MonoBehaviour
             popup.Initialize();
         });
     }
+
+    public void OpenStory()
+    {
+        PopupController.Instance.Open<CodexPopup>("StartStory", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
+
+    public void OpenCreative()
+    {
+        PopupController.Instance.Open<CodexPopup>("StartCreative", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
 }

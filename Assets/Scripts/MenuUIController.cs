@@ -23,7 +23,35 @@ public class MenuUIController : MonoBehaviour
     {
         PopupController.Instance.Open<CodexPopup>("CodexPopup", (popup) =>
         {
+<<<<<<< Updated upstream
             popup.Initialize(testBackground);
+=======
+            popup.Initialize();
+        });
+    }
+
+    public void OpenAchievements()
+    {
+        PopupController.Instance.Open<AchievementsPopup>("Achievements", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
+
+    public void OpenStory()
+    {
+        PopupController.Instance.Open<StoryPopup>("StartStory", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
+
+    public void OpenCreative()
+    {
+        PopupController.Instance.Open<CreativePopup>("StartCreative", (popup) =>
+        {
+            popup.Initialize();
+>>>>>>> Stashed changes
         });
     }
 }

@@ -497,7 +497,7 @@ RectTransform:
   m_GameObject: {fileID: 56468027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -424.90747}
-  m_LocalScale: {x: 0.07398347, y: 0.07398347, z: 0.07398347}
+  m_LocalScale: {x: 28, y: 28, z: 0.07398347}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2116032724}
@@ -1378,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 252.437}
+  m_AnchoredPosition: {x: 0, y: 252.43701}
   m_SizeDelta: {x: 0, y: -504.874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &290904615
@@ -1869,7 +1869,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &345746584
 MonoBehaviour:
@@ -7474,7 +7474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1778570958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7526,7 +7526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780909173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -40, z: 0}
+  m_LocalPosition: {x: 0, y: -59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8372,7 +8372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Geek Games\n\n\nEfe Korkmazhan\nEgemen \xD6zt\xFCrk\nG\xF6k\xE7enaz Uzun\nG\xFClce
+  m_text: "Geyik Games\n\n\nEfe Korkmazhan\nEgemen \xD6zt\xFCrk\nG\xF6k\xE7enaz Uzun\nG\xFClce
     \xD6zdilekcan\nTaha Batur \u015Eenli\nZehra \u0130lkin G\xF6kalp\n\n\nTaha Batur
     \u015Eenli\nZehra \u0130lkin G\xF6kalp\n\n\nEfe Korkmazhan\nEgemen \xD6zt\xFCrk\nTaha
     Batur \u015Eenli\n\n\nH. Altay G\xFCvenir\n\xD6zg\xFCr Tolga Baycan\nJ\xFClide
@@ -8553,7 +8553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2116032724
 Transform:
   m_ObjectHideFlags: 0

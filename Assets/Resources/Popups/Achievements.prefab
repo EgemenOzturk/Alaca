@@ -80,6 +80,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86a312724cf8404982a776e4bc7f7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementDescs:
+  - {fileID: 3796339696580371947}
+  - {fileID: 2554955406687179991}
+  - {fileID: 372068601983354433}
+  achievementNames:
+  - {fileID: 422449729652398220}
+  - {fileID: 5914329835419389441}
+  - {fileID: 3321270298045087735}
 --- !u!1 &372068601983354433
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -270}
+  m_AnchoredPosition: {x: 200, y: -300}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7005280027076061752
@@ -172,7 +180,7 @@ GameObject:
   - component: {fileID: 749363696837431287}
   - component: {fileID: 1851924027429425345}
   m_Layer: 0
-  m_Name: Photo1
+  m_Name: Name1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +247,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Photo for Achievement 1
+  m_Text: Name1
 --- !u!1 &731716965452643438
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -90}
+  m_AnchoredPosition: {x: 200, y: -100}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4044769031561869566
@@ -703,7 +711,7 @@ GameObject:
   - component: {fileID: 43447919181855621}
   - component: {fileID: 7681491206829499232}
   m_Layer: 0
-  m_Name: Photo3
+  m_Name: Name3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,7 +734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -270}
+  m_AnchoredPosition: {x: -200, y: -300}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &43447919181855621
@@ -770,7 +778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Photo for Achievement 3
+  m_Text: Name3
 --- !u!1 &3796339696580371947
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +947,7 @@ GameObject:
   - component: {fileID: 3217390236501179916}
   - component: {fileID: 7051939194591416886}
   m_Layer: 0
-  m_Name: Photo2
+  m_Name: Name2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,7 +970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -90}
+  m_AnchoredPosition: {x: -200, y: -100}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3217390236501179916
@@ -1006,7 +1014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Photo for Achievement 2
+  m_Text: Name2
 --- !u!1 &6763575167813374898
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,6 @@
+<achievements>
+  <achievement name="achievement1" description="This is the first achievement" />
+  <achievement name="achievement2" description="This is the second achievement" />
+  <achievement name="achievement3" description="This is the third achievement" />
+</achievements>
+

@@ -19,7 +19,6 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     /*
     public void SetLanguage(int lang){
@@ -28,6 +27,6 @@ public class MenuController : MonoBehaviour
     */
 
     public void SetMusic(bool soundOn){
-        theme.mute = !soundOn;
+        theme.mute = soundOn;
     }
 }

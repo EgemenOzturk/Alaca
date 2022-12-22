@@ -45,6 +45,17 @@ namespace geyikgames.unity.popup
             base.Clicked(action);
 
             Debug.Log("Click event. Action: " + action);
+
+            if (action == 1)
+            {
+                //START A FRESH CREATIVE GAME HERE
+                SceneManager.LoadScene("GameScene");
+            }
+            if (action == 2)
+            {
+                //LOAD CREATIVE GAME DATA HERE FROM XML
+                SceneManager.LoadScene("GameScene");
+            }
         }
     }
 }

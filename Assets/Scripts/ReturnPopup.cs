@@ -2,16 +2,28 @@ using UnityEngine;
 
 using geyikgames.unity.popup;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 namespace geyikgames.unity.popup
 {
-    public class StoryPopup : Popup
+    public class ReturnPopup : Popup
     {
         public void Initialize()
         {
         }
 
-        public override void Opening()
+        void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                // Check if the mouse was clicked over a UI element
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    Debug.Log("Clicked on the UI");
+                }
+            }
+        }
+public override void Opening()
         {
             base.Opening();
             Debug.Log("Called before setActive(true)");
@@ -46,15 +58,11 @@ namespace geyikgames.unity.popup
 
             Debug.Log("Click event. Action: " + action);
 
-            if(action == 1)
+            if(action == 2)
             {
-                //START A FRESH STORY GAME HERE
-                SceneManager.LoadScene("GameScene");
-            }
-            if (action == 2)
-            {
-                //LOAD STORY GAME DATA HERE FROM XML
-                SceneManager.LoadScene("GameScene");
+                //SAVE THE GAME'S DATA HERE, READ THE XML VALUE TAKEN FROM THE FILE
+                //TO DETERMINE WHETHER THE GAME IS IN STORY OR CREATIVE MODE
+                SceneManager.LoadScene("SampleScene");
             }
         }
     }

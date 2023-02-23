@@ -6,6 +6,13 @@ using geyikgames.manager;
 
 public class InGameUIController : MonoBehaviour
 {
+    private Vector3 origin;
+    private Vector3 diff;
+    private Vector3 resetCam;
+
+    private bool drag = false;
+
+
     private void Awake()
     {
         _ = Manager.Instance;
@@ -13,13 +20,37 @@ public class InGameUIController : MonoBehaviour
 
     void Start()
     {
+        resetCam = Camera.main.transform.position;
 
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        if(Input.GetMouseButton(0))
+        {
+            diff = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
+
+            if(drag == false)
+            {
+                drag = true;
+                origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            }
+        }
+        else
+        {
+            drag = false;
+        }
+
+        if(drag)
+        {
+            Camera.main.transform.position = origin - diff;
+        }
+
+        if(Input.GetMouseButton(1))
+        {
+            Camera.main.transform.position = resetCam;
+        }
     }
 
     public void OpenReturn()

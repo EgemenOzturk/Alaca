@@ -1,44 +1,67 @@
 using UnityEngine;
 using Debug = UnityEngine.Debug;
-using geyikgames.unity.popup;
-using UnityEngine.SceneManagement;
-using System.Diagnostics;
 using System.Xml;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 
 public class GoldEnergyTracker : MonoBehaviour
 {
-    [SerializeField] public GameObject goldText; //sonra deðiþtir
-    [SerializeField] public GameObject energyText; //sonra deðiþtir
+    [SerializeField] public TextMeshProUGUI goldText; //sonra deðiþtir
+    [SerializeField] public TextMeshProUGUI energyText; //sonra deðiþtir
 
     // Start is called before the first frame update
     void Start()
     {
+        readGoldEnergy();
+    }
+
+    public void changeGold(int amount)
+    {
         XmlDocument mydoc = new XmlDocument();
         mydoc.Load("GoldEnergy.xml");
-        XmlNodeList nodelist = mydoc.SelectNodes("achievements");
+        XmlNodeList nodelist = mydoc.SelectNodes("currency");
 
         nodelist = nodelist[0].ChildNodes;
 
         if (nodelist.Count > 0)
         {
-            XmlNode node = nodelist[0];
-            goldText.GetComponent<TMP_Text>().text = node.Attributes["gold"].Value;
-            energyText.GetComponent<TMP_Text>().text = node.Attributes["energy"].Value;
+            mydoc.SelectSingleNode("currency/gold").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) + amount).ToString();
+            goldText.GetComponent<TMP_Text>().text = "Gold: " + mydoc.SelectSingleNode("currency/gold").InnerText;
+
+            mydoc.Save("GoldEnergy.xml");
         }
-
-        /*XmlNode gold = mydoc.SelectSingleNode("gold");
-        XmlNode energy = mydoc.SelectSingleNode("energy");
-
-        goldText.GetComponent<UnityEngine.UI.Text>().text = gold.Attributes["amount"].Value;
-        energyText.GetComponent<UnityEngine.UI.Text>().text = energy.Attributes["amount"].Value;*/
-
     }
 
-    // Update is called once per frame
-    void Update()
+    public void changeEnergy(int amount)
     {
+        XmlDocument mydoc = new XmlDocument();
+        mydoc.Load("GoldEnergy.xml");
+        XmlNodeList nodelist = mydoc.SelectNodes("currency");
+
+        nodelist = nodelist[0].ChildNodes;
+
+        if (nodelist.Count > 0)
+        {
+            mydoc.SelectSingleNode("currency/energy").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) + amount).ToString();
+            energyText.GetComponent<TMP_Text>().text = "Energy: " + mydoc.SelectSingleNode("currency/energy").InnerText;
+
+            mydoc.Save("GoldEnergy.xml");
+        }
+    }
+
+    private void readGoldEnergy() 
+    {
+        XmlDocument mydoc = new XmlDocument();
+        mydoc.Load("GoldEnergy.xml");
+        XmlNodeList nodelist = mydoc.SelectNodes("currency");
+
+        nodelist = nodelist[0].ChildNodes;
+        
+        Debug.Log(nodelist.Count);
+
+        if (nodelist.Count > 0)
+        {
+            goldText.GetComponent<TMP_Text>().text = "Gold: " + mydoc.SelectSingleNode("currency/gold").InnerText;
+            energyText.GetComponent<TMP_Text>().text = "Energy: " + mydoc.SelectSingleNode("currency/energy").InnerText;
+        }
     }
 }

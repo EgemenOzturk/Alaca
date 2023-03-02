@@ -1,4 +1,5 @@
-<achievements>
-  <achievement gold="242" energy="456" />
-</achievements>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<currency>
+  <gold>792</gold>
+  <energy>806</energy>
+</currency>

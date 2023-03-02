@@ -60,4 +60,12 @@ public class InGameUIController : MonoBehaviour
             popup.Initialize();
         });
     }
+
+    public void OpenTrade()
+    {
+        PopupController.Instance.Open<TradePopup>("TradePopup", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
 }

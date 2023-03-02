@@ -22,12 +22,16 @@ public class GoldEnergyTracker : MonoBehaviour
 
         nodelist = nodelist[0].ChildNodes;
 
-        if (nodelist.Count > 0)
+        if (nodelist.Count > 0 && int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) > 0)
         {
             mydoc.SelectSingleNode("currency/gold").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) + amount).ToString();
             goldText.GetComponent<TMP_Text>().text = "Gold: " + mydoc.SelectSingleNode("currency/gold").InnerText;
 
             mydoc.Save("GoldEnergy.xml");
+        }
+        else
+        {
+            Debug.Log("Error! There is not enough Gold!");
         }
     }
 
@@ -39,12 +43,16 @@ public class GoldEnergyTracker : MonoBehaviour
 
         nodelist = nodelist[0].ChildNodes;
 
-        if (nodelist.Count > 0)
+        if (nodelist.Count > 0 && int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) > 0)
         {
             mydoc.SelectSingleNode("currency/energy").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) + amount).ToString();
             energyText.GetComponent<TMP_Text>().text = "Energy: " + mydoc.SelectSingleNode("currency/energy").InnerText;
 
             mydoc.Save("GoldEnergy.xml");
+        }
+        else
+        {
+            Debug.Log("Error! There is not enough Energy!");
         }
     }
 
@@ -56,8 +64,6 @@ public class GoldEnergyTracker : MonoBehaviour
 
         nodelist = nodelist[0].ChildNodes;
         
-        Debug.Log(nodelist.Count);
-
         if (nodelist.Count > 0)
         {
             goldText.GetComponent<TMP_Text>().text = "Gold: " + mydoc.SelectSingleNode("currency/gold").InnerText;

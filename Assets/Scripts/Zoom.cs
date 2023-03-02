@@ -6,11 +6,8 @@ using UnityEngine.UI;
 
 public class Zoom : MonoBehaviour
 {
-    private Vector3 Origin;
-    private Vector3 Difference;
     private Vector3 ResetCamera;
-    private bool drag = false;
-    private bool zoomInTrue = false;
+    private Vector3 touchCamera;
 
     private void Start()
     {
@@ -23,28 +20,11 @@ public class Zoom : MonoBehaviour
         Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         Debug.Log(Camera.main.transform.position);
 
-        if (Input.GetMouseButton(0))
+        if (!Input.GetMouseButton(1))
         {
-            if(zoomInTrue)
-                Difference = (Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.y, -1))) - Camera.main.transform.position;
-            else
-                Difference = (Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1))) - Camera.main.transform.position;
+            Debug.Log(Input.mouseScrollDelta);
+            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x + Input.mouseScrollDelta.x, Camera.main.transform.position.y - Input.mouseScrollDelta.y, Camera.main.transform.position.z);
 
-            if (drag == false)
-            {
-                drag = true;
-                Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            }
-
-        }
-        else
-        {
-            drag = false;
-        }
-
-        if (drag)
-        {
-            Camera.main.transform.position = Origin - Difference * 0.5f;
         }
 
         if (Input.GetMouseButton(1))
@@ -52,15 +32,9 @@ public class Zoom : MonoBehaviour
 
     }
 
-    public void setZoom()
+    //While converting to mobile use the touchInput commands
+    private void Update()
     {
-        if(zoomInTrue)
-        {
-            zoomInTrue = false;
-        }
-        else
-        {
-            zoomInTrue = true;
-        }
+        
     }
 }

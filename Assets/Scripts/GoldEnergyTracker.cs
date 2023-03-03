@@ -13,6 +13,10 @@ public class GoldEnergyTracker : MonoBehaviour
     {
         readGoldEnergy();
     }
+    void Update()
+    {
+        readGoldEnergy();
+    }
 
     public void changeGold(int amount)
     {

@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class Zoom : MonoBehaviour
 {
     private Vector3 ResetCamera;
-    private Vector3 camPos;
-    private float X;
-    private float Y;
     public int cameraDragSpeed = 500;
 
     private void Update()
@@ -34,7 +31,6 @@ public class Zoom : MonoBehaviour
         if(!Input.GetMouseButton(1) && Input.mouseScrollDelta.y != 0)
         {
             Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - Input.mouseScrollDelta.y, Camera.main.transform.position.z);
-            camPos = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - Input.mouseScrollDelta.y, Camera.main.transform.position.z);
         }
     }    
 }

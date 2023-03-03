@@ -76,4 +76,13 @@ public class InGameUIController : MonoBehaviour
             popup.Initialize();
         });
     }
+
+
+    public void OpenBuildDelete()
+    {
+        PopupController.Instance.Open<BuildDeletePopup>("BuildDeletePopup", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
 }

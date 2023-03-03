@@ -68,4 +68,12 @@ public class InGameUIController : MonoBehaviour
             popup.Initialize();
         });
     }
+
+    public void OpenSettings()
+    {
+        PopupController.Instance.Open<SettingsPopup>("SettingsPopup", (popup) =>
+        {
+            popup.Initialize();
+        });
+    }
 }

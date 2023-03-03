@@ -882,7 +882,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 508833690}
         m_TargetAssemblyTypeName: InGameUIController, Assembly-CSharp
-        m_MethodName: OpenReturn
+        m_MethodName: OpenSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1176,6 +1176,7 @@ MonoBehaviour:
   _tilePrefab: {fileID: 7906445963422313736, guid: 98c429b5f86e0cc4aaf80a2c4e2500b0,
     type: 3}
   _cam: {fileID: 2060620218}
+  ground: {fileID: 1175436339}
 --- !u!4 &1015775365
 Transform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175436339}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20, y: 0, z: 20}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1765,8 +1766,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2060620218}
   - component: {fileID: 2060620217}
-  - component: {fileID: 2060620219}
   - component: {fileID: 2060620216}
+  - component: {fileID: 2060620219}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1841,7 +1842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060620215}
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 25, y: 91.7, z: -21.6}
+  m_LocalPosition: {x: 0, y: 40, z: -40}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []

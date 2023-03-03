@@ -15,6 +15,8 @@ public class BuildingPlacer : MonoBehaviour
 
     public static BuildingPlacer inst;
 
+    private List<GameObject> placedBuildings = new List<GameObject>();
+
     void Awake()
     {
         inst = this;
@@ -22,10 +24,10 @@ public class BuildingPlacer : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
             CancelBuildingPlacement();
 
-        if(Time.time - lastUpdateTime > placementIndicatorUpdateRate && currentlyPlacing)
+        if (Time.time - lastUpdateTime > placementIndicatorUpdateRate && currentlyPlacing)
         {
             lastUpdateTime = Time.time;
 
@@ -33,15 +35,16 @@ public class BuildingPlacer : MonoBehaviour
             placementIndicator.transform.position = curPlacementPos;
         }
 
-        if(currentlyPlacing && Input.GetMouseButtonDown(0))
+        if (currentlyPlacing && Input.GetMouseButtonDown(0))
         {
             PlaceBuilding();
         }
+
     }
 
     public void BeginNewBuildingPlacement(BuildingPreset buildingPreset)
     {
-        if(City.inst.money < buildingPreset.cost)
+        if (City.inst.money < buildingPreset.cost)
             return;
 
         currentlyPlacing = true;
@@ -57,8 +60,16 @@ public class BuildingPlacer : MonoBehaviour
 
     void PlaceBuilding()
     {
-        GameObject buildingObj = Instantiate(curBuildingPreset.prefab, curPlacementPos, Quaternion.identity);
-        City.inst.OnPlaceBuilding(curBuildingPreset);
+        if (City.inst.IsPositionOccupied(placementIndicator.transform.position))
+        {
+            CancelBuildingPlacement();
+        }
+        else
+        {
+            GameObject buildingObj = Instantiate(curBuildingPreset.prefab, curPlacementPos, Quaternion.identity);
+            placedBuildings.Add(buildingObj);
+            City.inst.OnPlaceBuilding(curBuildingPreset, placementIndicator.transform.position);
+        }
 
         CancelBuildingPlacement();
     }

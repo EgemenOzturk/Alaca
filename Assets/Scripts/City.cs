@@ -17,6 +17,7 @@ public class City : MonoBehaviour
     public TextMeshProUGUI statsText;
 
     private List<BuildingPreset> buildings = new List<BuildingPreset>();
+    public List<Vector3> occupiedPositions = new List<Vector3>();
 
     public static City inst;
 
@@ -25,11 +26,16 @@ public class City : MonoBehaviour
         inst = this;
     }
 
-    public void OnPlaceBuilding(BuildingPreset building)
+    public bool IsPositionOccupied(Vector3 position)
     {
-        maxPopulation += building.population;
-        maxJobs += building.jobs;
+        return occupiedPositions.Contains(position);
+    }
+
+    public void OnPlaceBuilding(BuildingPreset building, Vector3 position)
+    {
+
         buildings.Add(building);
+        occupiedPositions.Add(position);
     }
 
     public void EndTurn()

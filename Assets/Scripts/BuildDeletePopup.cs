@@ -2,11 +2,18 @@ using UnityEngine;
 
 using geyikgames.unity.popup;
 using UnityEngine.SceneManagement;
+using System.Xml;
+using TMPro;
 
 namespace geyikgames.unity.popup
 {
     public class BuildDeletePopup : Popup
     {
+        [SerializeField] public GameObject buildDesc;
+        [SerializeField] public GameObject deleteDesc;
+        [SerializeField] public GameObject buildTag;
+        [SerializeField] public GameObject deleteTag;
+
         public void Initialize()
         {
         }
@@ -15,6 +22,29 @@ namespace geyikgames.unity.popup
         {
             base.Opening();
             Debug.Log("Called before setActive(true)");
+
+            XmlDocument mydoc = new XmlDocument();
+            mydoc.Load("Language.xml");
+            XmlNodeList nodelist = mydoc.SelectNodes("Language");
+            nodelist = nodelist[0].ChildNodes;
+
+            if (nodelist.Count > 0)
+            {
+                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    buildDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/buildDesc").InnerText.Trim();
+                    deleteDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/deleteDesc").InnerText.Trim();
+                    buildTag.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/buildTag").InnerText.Trim();
+                    deleteTag.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/deleteTag").InnerText.Trim();
+                }
+                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    buildDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/buildDesc").InnerText.Trim();
+                    deleteDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/deleteDesc").InnerText.Trim();
+                    buildTag.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/buildTag").InnerText.Trim();
+                    deleteTag.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/deleteTag").InnerText.Trim();
+                }
+            }
         }
 
         public override void Opened()

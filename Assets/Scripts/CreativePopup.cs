@@ -2,11 +2,17 @@ using UnityEngine;
 
 using geyikgames.unity.popup;
 using UnityEngine.SceneManagement;
+using System.Xml;
+using TMPro;
 
 namespace geyikgames.unity.popup
 {
     public class CreativePopup : Popup
     {
+        [SerializeField] public GameObject creativeHead;
+        [SerializeField] public GameObject creativeDesc;
+        [SerializeField] public GameObject newG;
+        [SerializeField] public GameObject loadG;
         public void Initialize()
         {
         }
@@ -15,6 +21,29 @@ namespace geyikgames.unity.popup
         {
             base.Opening();
             Debug.Log("Called before setActive(true)");
+
+            XmlDocument mydoc = new XmlDocument();
+            mydoc.Load("Language.xml");
+            XmlNodeList nodelist = mydoc.SelectNodes("Language");
+            nodelist = nodelist[0].ChildNodes;
+
+            if (nodelist.Count > 0)
+            {
+                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    creativeHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/creativeHead").InnerText.Trim();
+                    creativeDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/creativeDesc").InnerText.Trim();
+                    newG.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/newG").InnerText.Trim();
+                    loadG.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/loadG").InnerText.Trim();
+                }
+                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    creativeHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/creativeHead").InnerText.Trim();
+                    creativeDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/creativeDesc").InnerText.Trim();
+                    newG.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/newG").InnerText.Trim();
+                    loadG.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/loadG").InnerText.Trim();
+                }
+            }
         }
 
         public override void Opened()

@@ -3,11 +3,19 @@ using UnityEngine;
 using geyikgames.unity.popup;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using static TreeEditor.TreeGroup;
+using System.Xml;
+using TMPro;
 
 namespace geyikgames.unity.popup
 {
     public class ReturnPopup : Popup
     {
+        [SerializeField] public GameObject returnDesc;
+        [SerializeField] public GameObject returnHead;
+        [SerializeField] public GameObject returnYes;
+        [SerializeField] public GameObject returnNo;
+
         public void Initialize()
         {
         }
@@ -23,10 +31,34 @@ namespace geyikgames.unity.popup
                 }
             }
         }
-public override void Opening()
+
+        public override void Opening()
         {
             base.Opening();
             Debug.Log("Called before setActive(true)");
+
+            XmlDocument mydoc = new XmlDocument();
+            mydoc.Load("Language.xml");
+            XmlNodeList nodelist = mydoc.SelectNodes("Language");
+            nodelist = nodelist[0].ChildNodes;
+
+            if (nodelist.Count > 0)
+            {
+                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    returnDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/returnDesc").InnerText.Trim();
+                    returnHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/returnHead").InnerText.Trim();
+                    returnYes.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/returnYes").InnerText.Trim();
+                    returnNo.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/returnNo").InnerText.Trim();
+                }
+                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    returnDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/returnDesc").InnerText.Trim();
+                    returnHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/returnHead").InnerText.Trim();
+                    returnYes.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/returnYes").InnerText.Trim();
+                    returnNo.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/returnNo").InnerText.Trim();
+                }
+            }
         }
 
         public override void Opened()

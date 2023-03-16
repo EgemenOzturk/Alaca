@@ -1,0 +1,326 @@
+<Language>
+  <Turkish>
+    <isBeingUsed>False</isBeingUsed>
+    <lngtext>
+		Türkçe
+	</lngtext>
+    <settings>
+		Ayarlar
+	</settings>
+    <achievements>
+		Başarımlar
+	</achievements>
+    <credits>
+		Eser Sahipleri
+	</credits>
+    <codex>
+		Arşiv
+	</codex>
+    <story>
+		Hikaye Modu
+	</story>
+    <creative>
+		Yaratıcı Mod
+	</creative>
+    <shop>
+		Mağaza
+	</shop>
+    <buildDesc>
+		Bu menüyü kullanarak menüden seçtiğin binaları inşa edebilirsin:
+	</buildDesc>
+    <deleteDesc>
+		Bu menüyü kullanarak haritada seçtiğin binaları yıkabilirsin:
+	</deleteDesc>
+    <buildTag>
+		İnşaat Menüsü
+	</buildTag>
+    <deleteTag>
+		Yıkma Menüsü
+	</deleteTag>
+    <codexHeader>
+		Alaca Ansiklopedisi
+	</codexHeader>
+    <switchButton>
+		Diğer Enerji Kaynakları
+	</switchButton>
+    <textRenewable>
+		Yenilenebilir Enerji Türleri
+	</textRenewable>
+    <textNonRenewable>
+		Yenilenemez Enerji Türleri
+	</textNonRenewable>
+    <returnDesc>
+		Ana menüye dönmek istediğine emin misin? İlerlemen otomatik olarak kaydedilecek. 
+	</returnDesc>
+    <returnHead>
+		Gitmek Mi İstiyorsun?
+	</returnHead>
+    <returnYes>
+		Evet, kaydet ve çık
+	</returnYes>
+    <returnNo>
+		Hayır, oyuna devam!
+	</returnNo>
+    <muteMusic>
+		MÜZİK
+	</muteMusic>
+    <muteButton>
+		SES EFEKTLERİ
+	</muteButton>
+    <settingsDesc>
+		Burası Ayarlar menüsü! 
+	</settingsDesc>
+    <musOnText>
+		MÜZİK AÇIK
+	</musOnText>
+    <musOffText>
+		MÜZİK KAPALI
+	</musOffText>
+    <soundEffOnText>
+		SES EFEKTLERİ AÇIK
+	</soundEffOnText>
+    <soundEffOffText>
+		SES EFEKTLERİ KAPALI
+	</soundEffOffText>
+    <creativeHead>
+		Yaratıcı Mod
+	</creativeHead>
+    <creativeDesc>
+		Yaratıcı Mod sana tamamen özgürlük tanır. Yeni bir şehri yönetmeye başla ve onu yenilenebilir enerji merkezine çevir!
+	</creativeDesc>
+    <storyHead>
+		Hikaye Modu
+	</storyHead>
+    <storyDesc>
+		Alaca şehrinin başına geç ve şehrin geleceğine karar ver! Alaca'yı yeşil enerjinin merkezi haline mi getireceksin yoksa tek amacın üretim mi olacak?
+	</storyDesc>
+    <newG>
+		Yeni Oyun
+	</newG>
+    <loadG>
+		Kaydı Yükle
+	</loadG>
+    <tradeHead>
+		Ticaret Merkezi!
+	</tradeHead>
+    <tradeDesc>
+		Burada istediğin kaynakları harcayarak diğer türde bir kaynak alabilirsin!
+	</tradeDesc>
+    <tradeOpt1>
+		50 altın al, 25 enerji sat
+	</tradeOpt1>
+    <tradeOpt2>
+		100 altın al, 40 enerji sat
+		</tradeOpt2>
+    <tradeOpt3>
+		50 enerji al, 120 altın  sat
+	</tradeOpt3>
+    <tradeOpt4>
+		100 enerji al, 230 altın sat
+	</tradeOpt4>
+    <buyOp1>
+		50 Altın
+	</buyOp1>
+    <buyOp2>
+		50 Enerji
+	</buyOp2>
+    <buyOp3>
+		100 Altın
+	</buyOp3>
+    <buyOp4>
+		100 Enerji
+	</buyOp4>
+    <buyOp5>
+		500 Altın
+	</buyOp5>
+    <buyOp6>
+		500 Enerji
+	</buyOp6>
+    <buyOp7>
+		1000 Altın
+	</buyOp7>
+    <buyOp8>
+		1000 Enerji
+	</buyOp8>
+    <buyOp9>
+		Toplu Paket (500 Altın ve Enerji)
+	</buyOp9>
+    <purch>
+		Satın Al
+	</purch>
+    <eventHead>
+		Deneme Krizi!
+	</eventHead>
+    <eventDesc>
+		Efendim, birbirine ezeli rakip iki yatırımcı bize ulaştı. Biri bize 100 altın karşılığında 50 enerji önerirken diğeri ise bizden 10 enerjiyi 20 altına almayı teklif ediyor. Kimi seçeceksiniz?
+	</eventDesc>
+    <eventOpt1>
+		İlk yatırımcıya geri dönüş yapın. (+50 enerji, -100 altın)
+	</eventOpt1>
+    <eventOpt2>
+		İkinci yatırımcıya geri dönüş yapın. (+20 altın, -10 enerji)
+	</eventOpt2>
+  </Turkish>
+  <English>
+    <isBeingUsed>True</isBeingUsed>
+    <lngtext>
+		English
+	</lngtext>
+    <settings>
+		Settings
+	</settings>
+    <achievements>
+		Achievements
+	</achievements>
+    <credits>
+		Credits
+	</credits>
+    <codex>
+		Codex
+	</codex>
+    <story>
+		Story Mode
+	</story>
+    <creative>
+		Creative Mode
+	</creative>
+    <shop>
+		Shop
+	</shop>
+    <buildDesc>
+		Use this menu to build objects on the map after you select them:
+	</buildDesc>
+    <deleteDesc>
+		Use this menu to select objects from the map and delete them:
+	</deleteDesc>
+    <buildTag>
+		Build Menu
+	</buildTag>
+    <deleteTag>
+		Delete Menu
+	</deleteTag>
+    <codexHeader>
+		Alaca's Codex
+	</codexHeader>
+    <switchButton>
+		Other Energy Sources
+	</switchButton>
+    <textRenewable>
+		Renewable Energy Entries
+	</textRenewable>
+    <textNonRenewable>
+		Non-Renewable Energy Entries
+	</textNonRenewable>
+    <returnDesc>
+		Do you wish to return to the main menu? Your progress will be automatically saved. 
+	</returnDesc>
+    <returnHead>
+		Leaving So Soon?
+	</returnHead>
+    <returnYes>
+		Yes, save and quit
+	</returnYes>
+    <returnNo>
+		No, take me back!
+	</returnNo>
+    <muteMusic>
+		MUSIC
+	</muteMusic>
+    <muteButton>
+		SOUND EFFECTS
+	</muteButton>
+    <settingsDesc>
+		This is the Settings Menu! 
+	</settingsDesc>
+    <musOnText>
+		MUSIC ON
+	</musOnText>
+    <musOffText>
+		MUSIC OFF
+	</musOffText>
+    <soundEffOnText>
+		SOUND EFFECTS ON
+	</soundEffOnText>
+    <soundEffOffText>
+		SOUND EFFECTS OFF
+	</soundEffOffText>
+    <creativeHead>
+		Creative Mode
+	</creativeHead>
+    <creativeDesc>
+		Creative Mode gives you total freedom. Lead a newly-established city and turn it into a hub of sustainable energy!
+	</creativeDesc>
+    <storyHead>
+		Story Mode
+	</storyHead>
+    <storyDesc>
+		Take charge of Alaca City and decide its future: Will you turn it into a green utopia, or a titan of industrial production?
+	</storyDesc>
+    <newG>
+		New Game
+	</newG>
+    <loadG>
+		Load Game
+	</loadG>
+    <tradeHead>
+		Trade!
+	</tradeHead>
+    <tradeDesc>
+		This is the trade interface! Buy one currency at the cost of other!
+	</tradeDesc>
+    <tradeOpt1>
+		Buy 50 gold for 25 energy
+	</tradeOpt1>
+    <tradeOpt2>
+		Buy 100 gold for 40 energy
+		</tradeOpt2>
+    <tradeOpt3>
+		Buy 50 energy for 120 gold
+	</tradeOpt3>
+    <tradeOpt4>
+		Buy 10 energy for 230 gold
+	</tradeOpt4>
+    <buyOp1>
+		50 Gold
+	</buyOp1>
+    <buyOp2>
+		50 Energy
+	</buyOp2>
+    <buyOp3>
+		100 Gold
+	</buyOp3>
+    <buyOp4>
+		100 Energy
+	</buyOp4>
+    <buyOp5>
+		500 Gold
+	</buyOp5>
+    <buyOp6>
+		500 Energy
+	</buyOp6>
+    <buyOp7>
+		1000 Gold
+	</buyOp7>
+    <buyOp8>
+		1000 Energy
+	</buyOp8>
+    <buyOp9>
+		Multi Pack (500 Gold and Energy)
+	</buyOp9>
+    <purch>
+		Purchase
+	</purch>
+    <eventHead>
+		Test Event!
+	</eventHead>
+    <eventDesc>
+		Sir, we are contacted by two rival benefactors. One offers us 50 energy at the cost of 100 gold, while the other will give us 20 gold for 10 energy. Who will you pick?
+	</eventDesc>
+    <eventOpt1>
+		Go with the first benefactor. (+50 energy, -100 gold)
+	</eventOpt1>
+    <eventOpt2>
+		Go with the second benefactor. (+20 gold, -10 energy)
+	</eventOpt2>
+  </English>
+</Language>

@@ -58,11 +58,33 @@ public class GoldEnergyTracker : MonoBehaviour
         XmlNodeList nodelist = mydoc.SelectNodes("currency");
 
         nodelist = nodelist[0].ChildNodes;
-        
+
+        string energyStr = "";
+        string goldStr = "";
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("Language.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("Language");
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            if (mydoc2.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+            {
+                energyStr = "Enerji";
+                goldStr = "Altýn";
+            }
+            else if (mydoc2.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+            {
+                energyStr = "Energy";
+                goldStr = "Gold";
+            }
+        }
+
         if (nodelist.Count > 0)
         {
-            goldText.GetComponent<TMP_Text>().text = "Gold: " + mydoc.SelectSingleNode("currency/gold").InnerText;
-            energyText.GetComponent<TMP_Text>().text = "Energy: " + mydoc.SelectSingleNode("currency/energy").InnerText;
+            goldText.GetComponent<TMP_Text>().text = goldStr + ": " + mydoc.SelectSingleNode("currency/gold").InnerText;
+            energyText.GetComponent<TMP_Text>().text = energyStr + ": " + mydoc.SelectSingleNode("currency/energy").InnerText;
         }
     }
 }

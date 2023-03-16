@@ -22,6 +22,10 @@ public class InGameUIController : MonoBehaviour
     {
         resetCam = Camera.main.transform.position;
 
+        PopupController.Instance.Open<TestEventPopup>("TestEventPopup", (popup) =>
+        {
+            popup.Initialize();
+        });
     }
 
     // Update is called once per frame

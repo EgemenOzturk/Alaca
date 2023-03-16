@@ -13,8 +13,9 @@ namespace geyikgames.unity.popup
 {
     public class AchievementsPopup : Popup
     {
-        [SerializeField] public GameObject[] achievementDescs; //sonra deðiþtir
-        [SerializeField] public GameObject[] achievementNames; //sonra deðiþtir
+        [SerializeField] public GameObject[] achievementDescs; 
+        [SerializeField] public GameObject[] achievementNames; 
+        [SerializeField] public GameObject achievementTitle; 
         private GameObject Achievements; // assign the prefab in the inspector
         public List<Achievement> AchievementList; // list to store the achievements
 
@@ -32,13 +33,31 @@ namespace geyikgames.unity.popup
 
             nodelist = nodelist[0].ChildNodes;
 
+
+            XmlDocument mydoc2 = new XmlDocument();
+            mydoc2.Load("Language.xml");
+
             if (nodelist.Count > 0)
             {
-                for (int i = 0; i < nodelist.Count; i++)
+                if(mydoc2.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
                 {
-                    XmlNode node = nodelist[i];
-                    achievementDescs[i].GetComponent<UnityEngine.UI.Text>().text = node.Attributes["description"].Value;
-                    achievementNames[i].GetComponent<UnityEngine.UI.Text>().text = node.Attributes["name"].Value;
+                    achievementTitle.GetComponent<UnityEngine.UI.Text>().text = "Baþarýmlar";
+                    for (int i = 0; i < nodelist.Count; i++)
+                    {
+                        XmlNode node = nodelist[i];
+                        achievementDescs[i].GetComponent<UnityEngine.UI.Text>().text = node.Attributes["description2"].Value;
+                        achievementNames[i].GetComponent<UnityEngine.UI.Text>().text = node.Attributes["name2"].Value;
+                    }
+                }
+                else if(mydoc2.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    achievementTitle.GetComponent<UnityEngine.UI.Text>().text = "Achievements";
+                    for (int i = 0; i < nodelist.Count; i++)
+                    {
+                        XmlNode node = nodelist[i];
+                        achievementDescs[i].GetComponent<UnityEngine.UI.Text>().text = node.Attributes["description"].Value;
+                        achievementNames[i].GetComponent<UnityEngine.UI.Text>().text = node.Attributes["name"].Value;
+                    }
                 }
             }
             Debug.Log("Called before setActive(true)");

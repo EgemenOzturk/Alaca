@@ -1,6 +1,6 @@
 <achievements>
-  <achievement name="achievement1" description="This is the first achievement" />
-  <achievement name="achievement2" description="This is the second achievement" />
-  <achievement name="achievement3" description="This is the third achievement" />
+  <achievement name="achievement1" name2="başarım1" description="This is the first achievement" description2="Bu ilk başarım" />
+  <achievement name="achievement2" name2="başarım2" description="This is the second achievement" description2="Bu ikinci başarım" />
+  <achievement name="achievement3" name2="başarım3" description="This is the third achievement" description2="Bu üçüncü başarım" />
 </achievements>
 

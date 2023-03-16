@@ -2,13 +2,19 @@ using UnityEngine;
 
 using geyikgames.unity.popup;
 using UnityEngine.SceneManagement;
+using static TreeEditor.TreeGroup;
+using System.Xml;
+using TMPro;
 
 namespace geyikgames.unity.popup
 {
     public class CodexPopup : Popup
     {
-        [SerializeField] private GameObject textRenewable;
-        [SerializeField] private GameObject textNonRenewable;
+        [SerializeField] public GameObject textRenewable;
+        [SerializeField] public GameObject textNonRenewable;
+        [SerializeField] public GameObject switchButton;
+        [SerializeField] public GameObject codexHeader;
+
         private int clickedAt;
 
         public void Initialize()
@@ -22,6 +28,29 @@ namespace geyikgames.unity.popup
         {
             base.Opening();
             Debug.Log("Called before setActive(true)");
+
+            XmlDocument mydoc = new XmlDocument();
+            mydoc.Load("Language.xml");
+            XmlNodeList nodelist = mydoc.SelectNodes("Language");
+            nodelist = nodelist[0].ChildNodes;
+
+            if (nodelist.Count > 0)
+            {
+                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    textRenewable.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/textRenewable").InnerText.Trim();
+                    textNonRenewable.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/textNonRenewable").InnerText.Trim();
+                    switchButton.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/switchButton").InnerText.Trim();
+                    codexHeader.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/codexHeader").InnerText.Trim();
+                }
+                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    textRenewable.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/textRenewable").InnerText.Trim();
+                    textNonRenewable.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/textNonRenewable").InnerText.Trim();
+                    switchButton.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/switchButton").InnerText.Trim();
+                    codexHeader.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/codexHeader").InnerText.Trim();
+                }
+            }
         }
 
         public override void Opened()

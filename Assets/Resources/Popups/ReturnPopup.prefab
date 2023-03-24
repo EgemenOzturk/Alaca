@@ -80,6 +80,7 @@ MonoBehaviour:
   returnHead: {fileID: 1182021501647551803}
   returnYes: {fileID: 1391035414966379302}
   returnNo: {fileID: 3841008341188396039}
+  theGrid: {fileID: 0}
 --- !u!1 &731716965452643438
 GameObject:
   m_ObjectHideFlags: 0

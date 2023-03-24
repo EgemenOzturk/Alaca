@@ -15,6 +15,7 @@ namespace geyikgames.unity.popup
         [SerializeField] public GameObject returnHead;
         [SerializeField] public GameObject returnYes;
         [SerializeField] public GameObject returnNo;
+        [SerializeField] public GridManager theGrid;
 
         public void Initialize()
         {
@@ -94,6 +95,28 @@ namespace geyikgames.unity.popup
             {
                 //SAVE THE GAME'S DATA HERE, READ THE XML VALUE TAKEN FROM THE FILE
                 //TO DETERMINE WHETHER THE GAME IS IN STORY OR CREATIVE MODE
+
+                XmlDocument mydoc = new XmlDocument();
+                mydoc.Load("BuildData.xml");
+                XmlNodeList nodelist = mydoc.SelectNodes("build");
+                nodelist = nodelist[0].ChildNodes;
+
+                if (nodelist.Count > 0)
+                {
+                    mydoc.SelectSingleNode("build/buildNewTrue").InnerText = "False";
+
+                    /* I have abandoned this idea in favor of loading data to XML exactly immediately AFTER an item is constructed on the grid
+                     **** BURADA (HE*HEIGHT) + WIDTH ILE LINEER ARRAYA KOYABÝLÝRSÝN BUNU UNUTMA ****
+
+                    for (int i = 0; i < mydoc.SelectSingleNode("build/buildStats").InnerText.Trim().Length; i++)
+                    {
+                        mydoc.SelectSingleNode("build/buildStats").InnerText += theGrid.infoLoad[i];
+                    }
+                    */
+
+                    mydoc.Save("BuildData.xml");
+                }
+
                 SceneManager.LoadScene("SampleScene");
             }
         }

@@ -78,12 +78,42 @@ namespace geyikgames.unity.popup
             if(action == 1)
             {
                 //START A FRESH STORY GAME HERE
+                XmlDocument mydoc = new XmlDocument();
+                mydoc.Load("BuildData.xml");
+                XmlNodeList nodelist = mydoc.SelectNodes("build");
+                nodelist = nodelist[0].ChildNodes;
+
+                if(nodelist.Count > 0)
+                {
+                    mydoc.SelectSingleNode("build/buildStats").InnerText = "";
+                    mydoc.SelectSingleNode("build/buildNewTrue").InnerText = "True";
+                    mydoc.Save("BuildData.xml");
+                }
+
                 SceneManager.LoadScene("GameScene");
             }
             if (action == 2)
             {
                 //LOAD STORY GAME DATA HERE FROM XML
-                SceneManager.LoadScene("GameScene");
+                XmlDocument mydoc = new XmlDocument();
+                mydoc.Load("BuildData.xml");
+                XmlNodeList nodelist = mydoc.SelectNodes("build");
+                nodelist = nodelist[0].ChildNodes;
+
+                if(mydoc.SelectSingleNode("build/buildStats").InnerText.Trim().Length > 0)
+                { 
+                    if (nodelist.Count > 0)
+                    {
+                        mydoc.SelectSingleNode("build/buildNewTrue").InnerText = "False";
+                        mydoc.Save("BuildData.xml");
+                    }
+
+                    SceneManager.LoadScene("GameScene");
+                }
+                else
+                {
+                    Debug.Log("ERROR, YOU CANNOT LOAD EMPTY GAME!");
+                }
             }
         }
     }

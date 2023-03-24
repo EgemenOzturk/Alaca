@@ -1,0 +1,11 @@
+Model Information:
+* title:	modern facade tower model
+* source:	https://sketchfab.com/3d-models/modern-facade-tower-model-ffb26077ee524627acaf613517d19f10
+* author:	VertaScan (https://sketchfab.com/VertaScan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "modern facade tower model" (https://sketchfab.com/3d-models/modern-facade-tower-model-ffb26077ee524627acaf613517d19f10) by VertaScan (https://sketchfab.com/VertaScan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

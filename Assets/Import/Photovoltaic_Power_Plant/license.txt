@@ -1,0 +1,11 @@
+Model Information:
+* title:	Photovoltaic Power Plant
+* source:	https://sketchfab.com/3d-models/photovoltaic-power-plant-e7586533a0534d72b9abd427bd179563
+* author:	MOJackal (https://sketchfab.com/MOJackal)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Photovoltaic Power Plant" (https://sketchfab.com/3d-models/photovoltaic-power-plant-e7586533a0534d72b9abd427bd179563) by MOJackal (https://sketchfab.com/MOJackal) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

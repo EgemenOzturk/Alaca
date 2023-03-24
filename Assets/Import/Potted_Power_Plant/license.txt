@@ -1,0 +1,11 @@
+Model Information:
+* title:	Potted_Power_Plant
+* source:	https://sketchfab.com/3d-models/potted-power-plant-cf59efeb123b4cd6a60accfb2347ce21
+* author:	zburchye (https://sketchfab.com/zburchye)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Potted_Power_Plant" (https://sketchfab.com/3d-models/potted-power-plant-cf59efeb123b4cd6a60accfb2347ce21) by zburchye (https://sketchfab.com/zburchye) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

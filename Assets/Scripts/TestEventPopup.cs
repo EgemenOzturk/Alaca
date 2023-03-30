@@ -15,9 +15,33 @@ namespace geyikgames.unity.popup
         [SerializeField] public GameObject eventDesc;
         [SerializeField] public GameObject eventOpt1;
         [SerializeField] public GameObject eventOpt2;
+        private int eventID;
 
-        public void Initialize()
+        public void Initialize(int a)
         {
+            eventID = a;
+            XmlDocument mydoc = new XmlDocument();
+            mydoc.Load("Language.xml");
+            XmlNodeList nodelist = mydoc.SelectNodes("Language");
+            nodelist = nodelist[0].ChildNodes;
+
+            if (nodelist.Count > 0)
+            {
+                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    eventHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventHead" + eventID.ToString()).InnerText.Trim();
+                    eventDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventDesc" + eventID.ToString()).InnerText.Trim();
+                    eventOpt1.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventOpt1" + eventID.ToString()).InnerText.Trim();
+                    eventOpt2.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventOpt2" + eventID.ToString()).InnerText.Trim();
+                }
+                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    eventHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventHead" + eventID.ToString()).InnerText.Trim();
+                    eventDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventDesc" + eventID.ToString()).InnerText.Trim();
+                    eventOpt1.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventOpt1" + eventID.ToString()).InnerText.Trim();
+                    eventOpt2.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventOpt2" + eventID.ToString()).InnerText.Trim();
+                }
+            }
         }
 
         void Update()
@@ -29,29 +53,6 @@ namespace geyikgames.unity.popup
         {
             base.Opening();
             Debug.Log("Called before setActive(true)");
-
-            XmlDocument mydoc = new XmlDocument();
-            mydoc.Load("Language.xml");
-            XmlNodeList nodelist = mydoc.SelectNodes("Language");
-            nodelist = nodelist[0].ChildNodes;
-
-            if (nodelist.Count > 0)
-            {
-                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
-                {
-                    eventHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventHead").InnerText.Trim();
-                    eventDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventDesc").InnerText.Trim();
-                    eventOpt1.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventOpt1").InnerText.Trim();
-                    eventOpt2.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventOpt2").InnerText.Trim();
-                }
-                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
-                {
-                    eventHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventHead").InnerText.Trim();
-                    eventDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventDesc").InnerText.Trim();
-                    eventOpt1.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventOpt1").InnerText.Trim();
-                    eventOpt2.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventOpt2").InnerText.Trim();
-                }
-            }
         }
 
         public override void Opened()

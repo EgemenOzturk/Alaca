@@ -13,9 +13,17 @@ namespace geyikgames.unity.popup
         [SerializeField] public GameObject deleteDesc;
         [SerializeField] public GameObject buildTag;
         [SerializeField] public GameObject deleteTag;
+        public int isBuilding;
+
+        [SerializeField] public GameObject[] itemsBuildable;
 
         public void Initialize()
         {
+        }
+
+        public void setBuild(int a)
+        {
+            isBuilding = a;
         }
 
         public override void Opening()

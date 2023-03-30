@@ -11,6 +11,7 @@ public class InGameUIController : MonoBehaviour
     private Vector3 resetCam;
 
     private bool drag = false;
+    [SerializeField] public int testEventID;
 
 
     private void Awake()
@@ -22,9 +23,14 @@ public class InGameUIController : MonoBehaviour
     {
         resetCam = Camera.main.transform.position;
 
+        FireEvent(testEventID);
+    }
+
+    public void FireEvent(int a)
+    {
         PopupController.Instance.Open<TestEventPopup>("TestEventPopup", (popup) =>
         {
-            popup.Initialize();
+            popup.Initialize(a);
         });
     }
 

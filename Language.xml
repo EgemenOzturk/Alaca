@@ -1,6 +1,6 @@
 <Language>
   <Turkish>
-    <isBeingUsed>False</isBeingUsed>
+    <isBeingUsed>True</isBeingUsed>
     <lngtext>
 		Türkçe
 	</lngtext>
@@ -148,19 +148,6 @@
     <purch>
 		Satın Al
 	</purch>
-    <eventHead>
-		Deneme Krizi!
-	</eventHead>
-    <eventDesc>
-		Efendim, birbirine ezeli rakip iki yatırımcı bize ulaştı. Biri bize 100 altın karşılığında 50 enerji önerirken diğeri ise bizden 10 enerjiyi 20 altına almayı teklif ediyor. Kimi seçeceksiniz?
-	</eventDesc>
-    <eventOpt1>
-		İlk yatırımcıya geri dönüş yapın. (+50 enerji, -100 altın)
-	</eventOpt1>
-    <eventOpt2>
-		İkinci yatırımcıya geri dönüş yapın. (+20 altın, -10 enerji)
-	</eventOpt2>
-	
     <eventHead1>
 		Rakip Hayırseverler!
 	</eventHead1>
@@ -173,8 +160,7 @@
     <eventOpt21>
 		İkinci hayırseveri. (+20 altın, -10 enerji)
 	</eventOpt21>
-	
-	<eventHead2>
+    <eventHead2>
 		Bütçe Kesintisi!
 	</eventHead2>
     <eventDesc2>
@@ -186,8 +172,6 @@
     <eventOpt22>
 		100 Enerji yeterli olacaktır.
 	</eventOpt22>
-	
-	
     <eventHead3>
 		Devlet Yatırımı!
 	</eventHead3>
@@ -200,8 +184,7 @@
     <eventOpt23>
 		Bedava enerji her zaman iyidir.
 	</eventOpt23>
-	
-	<eventHead4>
+    <eventHead4>
 		Belediye Başkanı Yardım İstiyor!
 	</eventHead4>
     <eventDesc4>
@@ -213,8 +196,6 @@
     <eventOpt24>
 		Bu onun hatası, yapabileceğimiz hiçbir şey yok!
 	</eventOpt24>
-	
-	
     <eventHead5>
 		Bağışlar!
 	</eventHead5>
@@ -227,8 +208,7 @@
     <eventOpt25>
 		100 Enerji kaçırılmayacak kadar iyi bir anlaşma.
 	</eventOpt25>
-	
-	<eventHead6>
+    <eventHead6>
 		Protestolar!
 	</eventHead6>
     <eventDesc6>
@@ -240,8 +220,6 @@
     <eventOpt26>
 		Yüklerini hafifletebilmeleri için onlara enerji verin.
 	</eventOpt26>
-	
-	
     <eventHead7>
 		Sağlık tehlikesi!
 	</eventHead7>
@@ -254,8 +232,7 @@
     <eventOpt27>
 		Onlara ne isterlerse ödeyin.
 	</eventOpt27>
-	
-	<eventHead8>
+    <eventHead8>
 		Sağlık Ödülü!
 	</eventHead8>
     <eventDesc8>
@@ -267,8 +244,6 @@
     <eventOpt28>
 		Bedava enerji her zaman kaçırılmayacak kadar iyidir.
 	</eventOpt28>
-	
-	
     <eventHead9>
 		İş Başlıyor...
 	</eventHead9>
@@ -281,8 +256,7 @@
     <eventOpt29>
 		Tekliflerini reddedin.
 	</eventOpt29>
-	
-	<eventHead10>
+    <eventHead10>
 		İşletme Genişlemek İstiyor!
 	</eventHead10>
     <eventDesc10>
@@ -294,7 +268,6 @@
     <eventOpt210>
 		Reddediyoruz.
 	</eventOpt210>
-	
     <eventHead11>
 		İş Kurtarma
 	</eventHead11>
@@ -307,8 +280,7 @@
     <eventOpt211>
 		Hepsi çöplerini alıp gidebilirler!
 	</eventOpt211>
-	
-	<eventHead12>
+    <eventHead12>
 		Eylemciler Değişim İstiyor!
 	</eventHead12>
     <eventDesc12>
@@ -320,8 +292,6 @@
     <eventOpt212>
 		Ödedikleri miktar çok az. Olmaz!
 	</eventOpt212>
-	
-	
     <eventHead13>
 		Talepler Artıyor!
 	</eventHead13>
@@ -334,8 +304,7 @@
     <eventOpt213>
 		Bizden çok fazla fedakarlık bekliyorlar! Olmaz!
 	</eventOpt213>
-	
-	<eventHead14>
+    <eventHead14>
 		Tebrikler!
 	</eventHead14>
     <eventDesc14>
@@ -347,8 +316,6 @@
     <eventOpt214>
 		Daha mutlu vatandaşlara ihtiyacımız var.
 	</eventOpt214>
-	
-	
     <eventHead15>
 		Bütçe Açığı!
 	</eventHead15>
@@ -361,8 +328,7 @@
     <eventOpt215>
 		Hemen enerji satın!
 	</eventOpt215>
-	
-	<eventHead16>
+    <eventHead16>
 		Enerji Krizi!
 	</eventHead16>
     <eventDesc16>
@@ -374,9 +340,30 @@
     <eventOpt216>
 		Binaları satın!
 	</eventOpt216>
+    <cityStatHeader>
+		Şehirdeki bazı istatistikler
+	</cityStatHeader>
+    <Water>
+		Su Kirliliği Oranı:
+	</Water>
+    <Air>
+		Hava Kirliliği Oranı:
+	</Air>
+    <Soil>
+		Toprak Kirliliği Oranı:
+	</Soil>
+    <Happiness>
+		Mutluluk Endeksi:
+	</Happiness>
+    <LifeExpectancy>
+		Ortalama Yaşam Süresi:
+	</LifeExpectancy>
+    <ImmigrationPull>
+		Göç Alma Kapasitesi:
+	</ImmigrationPull>
   </Turkish>
   <English>
-    <isBeingUsed>True</isBeingUsed>
+    <isBeingUsed>False</isBeingUsed>
     <lngtext>
 		English
 	</lngtext>
@@ -548,7 +535,7 @@
     <eventOpt21>
 		Go with the second benefactor. (+20 gold, -10 energy)
 	</eventOpt21>
-	<eventHead2>
+    <eventHead2>
 		Slashed Budgets!
 	</eventHead2>
     <eventDesc2>
@@ -572,7 +559,7 @@
     <eventOpt23>
 		Free energy is always good. 
 	</eventOpt23>
-	<eventHead4>
+    <eventHead4>
 		Mayor Asks for Help!
 	</eventHead4>
     <eventDesc4>
@@ -596,7 +583,7 @@
     <eventOpt25>
 		100 Energy is too good of a deal to pass up.
 	</eventOpt25>
-	<eventHead6>
+    <eventHead6>
 		Protests!
 	</eventHead6>
     <eventDesc6>
@@ -620,7 +607,7 @@
     <eventOpt27>
 		Pay them whatever they want.
 	</eventOpt27>
-	<eventHead8>
+    <eventHead8>
 		Health Reward!
 	</eventHead8>
     <eventDesc8>
@@ -644,7 +631,7 @@
     <eventOpt29>
 		Refuse them.
 	</eventOpt29>
-	<eventHead10>
+    <eventHead10>
 		Business Wants to Expand!
 	</eventHead10>
     <eventDesc10>
@@ -668,7 +655,7 @@
     <eventOpt211>
 		They can all take their trash and go!
 	</eventOpt211>
-	<eventHead12>
+    <eventHead12>
 		Activists Demand Change!
 	</eventHead12>
     <eventDesc12>
@@ -692,7 +679,7 @@
     <eventOpt213>
 		That’s a bridge too far! No, not happening.
 	</eventOpt213>
-	<eventHead14>
+    <eventHead14>
 		Congratulations!
 	</eventHead14>
     <eventDesc14>
@@ -716,7 +703,7 @@
     <eventOpt215>
 		Sell energy, now!
 	</eventOpt215>
-	<eventHead16>
+    <eventHead16>
 		Energy Crisis!
 	</eventHead16>
     <eventDesc16>
@@ -728,5 +715,26 @@
     <eventOpt216>
 		Sell the buildings!
 	</eventOpt216>
+    <cityStatHeader>
+		Important Statistics of the City:
+	</cityStatHeader>
+    <Water>
+		Water Pollution:
+	</Water>
+    <Air>
+		Air Pollution:
+	</Air>
+    <Soil>
+		Soil Pollution:
+	</Soil>
+    <Happiness>
+		Happiness Index:
+	</Happiness>
+    <LifeExpectancy>
+		Average Life Expectancy:
+	</LifeExpectancy>
+    <ImmigrationPull>
+		Immigration Pull:
+	</ImmigrationPull>
   </English>
 </Language>

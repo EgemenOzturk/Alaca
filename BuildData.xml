@@ -3,4 +3,10 @@
   <buildNewTrue>True</buildNewTrue>
   <buildAmount>0</buildAmount>
   <cityGreenIndex>0</cityGreenIndex>
+  <Water>0</Water>
+  <Air>0</Air>
+  <Soil>0</Soil>
+  <Happiness>0</Happiness>
+  <ImmigrationPull>0</ImmigrationPull>
+  <LifeExpectancy>0</LifeExpectancy>
 </build>

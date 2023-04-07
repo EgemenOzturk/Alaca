@@ -90,18 +90,30 @@ namespace geyikgames.unity.popup
                 mydoc.Load("GoldEnergy.xml");
                 XmlNodeList nodelist = mydoc.SelectNodes("currency");
 
-                nodelist = nodelist[0].ChildNodes;
+                XmlDocument mydoc2 = new XmlDocument();
+                mydoc2.Load("EventData.xml");
+                XmlNodeList nodelist2 = mydoc2.SelectNodes("event");
 
-                if (nodelist.Count > 0 && int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) > 0)
+                nodelist = nodelist[0].ChildNodes;
+                nodelist2 = nodelist2[0].ChildNodes;
+
+                if (nodelist.Count > 0 && nodelist2.Count > 0 && int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) > 0)
                 {
-                    mydoc.SelectSingleNode("currency/energy").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) + 50).ToString();
-                    mydoc.SelectSingleNode("currency/gold").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) - 100).ToString();
+                    int goldToAdd = int.Parse(mydoc2.SelectSingleNode("event/event" + eventID + "ResG").InnerText);
+
+                    int engToAdd = int.Parse(mydoc2.SelectSingleNode("event/event" + eventID + "ResE").InnerText);
+
+                    Debug.Log(engToAdd);
+                    Debug.Log(goldToAdd);
+
+                    mydoc.SelectSingleNode("currency/energy").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) + engToAdd).ToString(); //50
+                    mydoc.SelectSingleNode("currency/gold").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) + goldToAdd).ToString(); // -100
                     mydoc.Save("GoldEnergy.xml");
                     Clicked(0);
                 }
                 else
                 {
-                    Debug.Log("Error! There is not enough Gold!");
+                    Debug.Log("Error! There is not enough Gold/Energy!");
                 }
             }
 
@@ -111,18 +123,30 @@ namespace geyikgames.unity.popup
                 mydoc.Load("GoldEnergy.xml");
                 XmlNodeList nodelist = mydoc.SelectNodes("currency");
 
-                nodelist = nodelist[0].ChildNodes;
+                XmlDocument mydoc2 = new XmlDocument();
+                mydoc2.Load("EventData.xml");
+                XmlNodeList nodelist2 = mydoc2.SelectNodes("event");
 
-                if (nodelist.Count > 0 && int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) > 0)
+                nodelist = nodelist[0].ChildNodes;
+                nodelist2 = nodelist2[0].ChildNodes;
+
+                if (nodelist.Count > 0 && nodelist2.Count > 0 && int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) > 0)
                 {
-                    mydoc.SelectSingleNode("currency/energy").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) - 10).ToString();
-                    mydoc.SelectSingleNode("currency/gold").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) + 20).ToString();
+                    int goldToAdd = int.Parse(mydoc2.SelectSingleNode("event/event" + eventID + "O2ResG").InnerText);
+
+                    int engToAdd = int.Parse(mydoc2.SelectSingleNode("event/event" + eventID + "O2ResE").InnerText);
+
+                    Debug.Log(engToAdd);
+                    Debug.Log(goldToAdd);
+
+                    mydoc.SelectSingleNode("currency/energy").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/energy").InnerText) + engToAdd).ToString(); //-10
+                    mydoc.SelectSingleNode("currency/gold").InnerText = (int.Parse(mydoc.SelectSingleNode("currency/gold").InnerText) + goldToAdd).ToString(); //20
                     mydoc.Save("GoldEnergy.xml");
                     Clicked(0);
                 }
                 else
                 {
-                    Debug.Log("Error! There is not enough Energy!");
+                    Debug.Log("Error! There is not enough Gold/Energy!");
                 }
             }
 

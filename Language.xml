@@ -179,10 +179,10 @@
 		Efendim, hükümet şehrimize yatırım yapmaya karar verdi! Vergi indirimi mi yoksa ekstra enerjinin tedarikimize yönlendirilmesini mi istediğimizi soruyorlar, cevabımız ne?
 	</eventDesc3>
     <eventOpt13>
-		Tabii ki vergi indirimi!
+		Tabii ki vergi indirimi! (+300 Altın)
 	</eventOpt13>
     <eventOpt23>
-		Bedava enerji her zaman iyidir.
+		Bedava enerji her zaman iyidir. (+50 Enerji)
 	</eventOpt23>
     <eventHead4>
 		Belediye Başkanı Yardım İstiyor!
@@ -191,10 +191,10 @@
 		Efendim! Alaca Belediye Başkanı bizimle iletişime geçerek bir altyapı genişletme projesi için acil yardım istedi. Görünüşe göre bütçe projeyi sürdürmek için yeterli değildi ve projeden vazgeçilmesi insanlar üzerinde olumsuz etkilere neden olabilir. Ne yapmalıyız?
 	</eventDesc4>
     <eventOpt14>
-		Ne istiyorsa yapın.
+		Ne istiyorsa yapın. (-200 Altın, +10 Mutluluk)
 	</eventOpt14>
     <eventOpt24>
-		Bu onun hatası, yapabileceğimiz hiçbir şey yok!
+		Bu onun hatası, yapabileceğimiz hiçbir şey yok! (-10 Mutluluk)
 	</eventOpt24>
     <eventHead5>
 		Bağışlar!
@@ -215,10 +215,10 @@
 		Efendim, Alaca şehrinin halkı sizi protesto ediyor! Kötü muamelenizin şehirde büyük sorunlara yol açtığını iddia ediyorlar ve bir tür tazminat talep ediyorlar. Onlara ya tazminat ödeyebiliriz ya da bedava enerji verebiliriz. Ne yapmalıyız?	
 	</eventDesc6>
     <eventOpt16>
-		Altınla istedikleri tazminatı verin.
+		Altınla istedikleri tazminatı verin. (-200 Altın)
 	</eventOpt16>
     <eventOpt26>
-		Yüklerini hafifletebilmeleri için onlara enerji verin.
+		Yüklerini hafifletebilmeleri için onlara enerji verin. (-75 Enerji)
 	</eventOpt26>
     <eventHead7>
 		Sağlık tehlikesi!
@@ -227,10 +227,10 @@
 		Efendim, Uluslararası Sağlık Standartları Örgütü, emisyon kısıtlamalarını ihlal ettiğimizi tespit etti! Ya acilen bazı enerji yatırımlarına son vermemiz ya da ağır bir ceza ödememiz gerekiyor. Ne yapmalıyız?
 	</eventDesc7>
     <eventOpt17>
-		Bazı işlemleri geçici olarak yavaşlatın.
+		Bazı işlemleri geçici olarak yavaşlatın. (-150 Enerji)
 	</eventOpt17>
     <eventOpt27>
-		Onlara ne isterlerse ödeyin.
+		Ne isterlerse ödeyin. (-500 Altın)
 	</eventOpt27>
     <eventHead8>
 		Sağlık Ödülü!
@@ -239,10 +239,10 @@
 		Efendim, Uluslararası Sağlık Standartları Örgütü emisyon kısıtlamalarına sıkı sıkıya bağlı kaldığımız için bizi tebrik eden bir mesaj gönderdi! Bizi bir bağışla ya da bedava bir enerji katkısıyla ödüllendirmek istiyorlar! Hangisini seçeceksiniz?
 	</eventDesc8>
     <eventOpt18>
-		Bir bağış çok makbule geçer.
+		Bir bağış çok makbule geçer. (+300 Altın)
 	</eventOpt18>
     <eventOpt28>
-		Bedava enerji her zaman kaçırılmayacak kadar iyidir.
+		Bedava enerji her zaman kaçırılmayacak kadar iyidir. (+75 Enerji)
 	</eventOpt28>
     <eventHead9>
 		İş Başlıyor...
@@ -251,10 +251,10 @@
 		Efendim, büyük bir iş adamı bizimle temasa geçti ve şehrimizde bedava bir petrol rafinerisi inşa etmelerine izin verip vermeyeceğinizi sordu. Karşılığında hiçbir şey istemiyorlar ve bunun bir iyi niyet göstergesi olduğunu iddia ediyorlar.
 	</eventDesc9>
     <eventOpt19>
-		İzin verin.
+		İzin verin. (1 Bedava Petrol Rafinerisi)
 	</eventOpt19>
     <eventOpt29>
-		Tekliflerini reddedin.
+		Tekliflerini reddedin. (Hiçbir Şey)
 	</eventOpt29>
     <eventHead10>
 		İşletme Genişlemek İstiyor!
@@ -263,10 +263,10 @@
 		Efendim, birlikte çalıştığımız iş adamı şehrimizdeki faaliyetlerini daha da genişletmeye karar verdi. Şehrimize bedava kömür madeni yapabileceklerini söylüyorlar. Nasıl cevap vermeliyiz?
 	</eventDesc10>
     <eventOpt110>
-		Eh, sonuşta ücretsiz…
+		Eh, sonuşta ücretsiz… (1 Bedava Kömür Madeni)
 	</eventOpt110>
     <eventOpt210>
-		Reddediyoruz.
+		Reddediyoruz. (Hiçbir Şey)
 	</eventOpt210>
     <eventHead11>
 		İş Kurtarma
@@ -275,10 +275,10 @@
 		İş adamı, yenilenebilir enerjileri kullanma eğiliminin değişmesi nedeniyle iflas etti! Topraklarımızda çabalarına devam etmeye istekliler, ancak varlıklarını yalnızca büyük miktarda ödeme kurtarabilir ve bizim reddetmemiz üzerine binalarını kapatacaklar! Ne yapmalıyız?
 	</eventDesc11>
     <eventOpt111>
-		Onlara varlıklarını koruyacağımızı söyle.
+		Onlara varlıklarını koruyacağımızı söyle. (-600 Altın)
 	</eventOpt111>
     <eventOpt211>
-		Hepsi çöplerini alıp gidebilirler!
+		Hepsi çöplerini alıp gidebilirler! (-1 Petrol Rafinerisi ve Kömür Madeni)
 	</eventOpt211>
     <eventHead12>
 		Eylemciler Değişim İstiyor!
@@ -287,10 +287,10 @@
 		Efendim, şehirdeki bir aktivist grup bizimle iletişime geçerek şehrin enerji şebekesinin iyileştirilmesine yardım teklifinde bulundu. Ancak işletmekte olduğumuz 3 yenilenemez enerji santralini kapatmamızı istiyorlar. Nasıl cevap vereceğiz?
 	</eventDesc12>
     <eventOpt112>
-		Zaten yeşile dönmeyi planlıyorduk.
+		Zaten yeşile dönmeyi planlıyorduk. (-3 Yenilenemez Enerji Binası, +1 Yenilenebilir Enerji Biması)
 	</eventOpt112>
     <eventOpt212>
-		Ödedikleri miktar çok az. Olmaz!
+		Ödedikleri miktar çok az. Olmaz! (Hiçbir Şey)
 	</eventOpt212>
     <eventHead13>
 		Talepler Artıyor!
@@ -299,22 +299,22 @@
 		Efendim, aktivist grup bize bir fırsat sağlamak için bir kez daha örgütlendi: İki yenilenemez enerji santralini kaldırmamız şartıyla yenilenebilir bir enerji santrali kurmamıza yardım etmeye istekliler. Onlara ne diyeceğiz?	
 	</eventDesc13>
     <eventOpt113>
-		İki yenilenemez enerji tesisini daha kaldırabiliriz. 
+		İki yenilenemez enerji tesisini daha kaldırabiliriz. (-2 Yenilenemez Enerji Binası, +1 Yenilenebilir Enerji Biması)
 	</eventOpt113>
     <eventOpt213>
-		Bizden çok fazla fedakarlık bekliyorlar! Olmaz!
+		Bizden çok fazla fedakarlık bekliyorlar! Olmaz! (Hiçbir Şey)
 	</eventOpt213>
     <eventHead14>
 		Tebrikler!
 	</eventHead14>
     <eventDesc14>
-		Efendim! Şehir aktivistleri, şehrin yeşilleşmesine yardımcı olmak için gösterdiğimiz tüm çabalar için bize teşekkür eden bir tebrik mektubu gönderdiler. Ya bedava bir güneş enerjisi santrali kurarak ya da şehrin her yerine bilgeliğinizi anlatan broşürler dağıtarak şükranlarını ifade etmek istiyorlar. Onlara ne söyleyelim?
+		Efendim! Şehir aktivistleri, şehrin yeşilleşmesine yardımcı olmak için gösterdiğimiz tüm çabalar için bize teşekkür eden bir tebrik mektubu gönderdiler. Ya bedava 2 güneş enerjisi santrali kurarak ya da şehrin her yerine bilgeliğinizi anlatan broşürler dağıtarak şükranlarını ifade etmek istiyorlar. Onlara ne söyleyelim?
 	</eventDesc14>
     <eventOpt114>
-		Bedava bir enerji santrali ihtiyacımız olan şey.
+		Bedava bir enerji santrali ihtiyacımız olan şey. (+2 Bedava Güneş Paneli)
 	</eventOpt114>
     <eventOpt214>
-		Daha mutlu vatandaşlara ihtiyacımız var.
+		Daha mutlu vatandaşlara ihtiyacımız var. (+25 Mutluluk)
 	</eventOpt214>
     <eventHead15>
 		Bütçe Açığı!
@@ -323,10 +323,10 @@
 		Efendim, son kararlarınız bütçemizde ani bir düşüşe neden olmuş gibi görünüyor! Ya bazı varlıklarımızı hemen tasfiye etmeliyiz ya da paramızı artırmak için enerjimizi satmalıyız, yoksa iflas etme riskine gireriz!
 	</eventDesc15>
     <eventOpt115>
-		Bazı binaları yok edin!
+		Bazı binaları yok edin! (3 Rastgele Binayı Sil, +500 Altın)
 	</eventOpt115>
     <eventOpt215>
-		Hemen enerji satın!
+		Hemen enerji satın! (-200 Enerji, +500 Altın)
 	</eventOpt215>
     <eventHead16>
 		Enerji Krizi!
@@ -335,10 +335,10 @@
 		Efendim, bir enerji kriziyle karşı karşıyayız! Artık şehre elektrik veremiyoruz. Ya hemen enerji ithal etmeliyiz ya da binalarımızı enerji firmalarına satmalıyız ki bize anında enerji sağlasınlar!
 	</eventDesc16>
     <eventOpt116>
-		Enerji ithal edin!
+		Enerji ithal edin! (-600 Altın, +300 Enerji)
 	</eventOpt116>
     <eventOpt216>
-		Binaları satın!
+		Binaları satın! (3 Rastgele Binayı Sil, +300 Enerji)
 	</eventOpt216>
     <cityStatHeader>
 		Şehirdeki bazı istatistikler
@@ -361,6 +361,78 @@
     <ImmigrationPull>
 		Göç Alma Kapasitesi:
 	</ImmigrationPull>
+    <Rplantname1>
+		Güneş Panelleri
+	</Rplantname1>
+    <Rplantname2>
+		Rüzgar Tribünleri
+	</Rplantname2>
+    <Rplantname3>
+		Hidroelektrik Santralleri
+	</Rplantname3>
+    <Rplantname4>
+		Biyoyakıt Santralleri
+	</Rplantname4>
+    <Rplantname5>
+		Jeotermik Santraller
+	</Rplantname5>
+    <Rplantname6>
+		Dalga Dönüştürücüleri
+	</Rplantname6>
+    <NRplantname1>
+		Petrol Rafinerileri
+	</NRplantname1>
+    <NRplantname2>
+		Kömür Madenleri
+	</NRplantname2>
+    <NRplantname3>
+		Doğalgaz Santralleri
+	</NRplantname3>
+    <NRplantname4>
+		Nükleer Enerji Santralleri
+	</NRplantname4>
+    <NRplantname5>
+		Odun Yakıtı Santralleri
+	</NRplantname5>
+    <NRplantname6>
+		Yenilenebilir ve Yenilenemez Enerji
+	</NRplantname6>
+    <Rplantdesc1>
+		Güneş paneli, üzerinde güneş enerjisini soğurmaya yarayan birçok güneş hücresi bulunduran bir enerji kaynağıdır. 6-30 panellik (1000 Watt) bir sistem, ihtiyaç olan yerlerde bir evin, 3000 watt'lık bir sistem ortalama bir binanın tüm elektrik ihtiyacını karşılayabilir. Endüstri uygulamaları veya elektrik santralleri için binlerce güneş panelinin kullanıldığı büyük sistemler kurulmaktadır. Bir güneş hücresinin performansı verimi ile ölçülür. Aldığı enerjinin yüzde kaçını kullanılabilir elektriğe dönüştürdüğü verimi belirler. 
+	</Rplantdesc1>
+    <Rplantdesc2>
+		Rüzgâr türbini, rüzgârdaki kinetik enerjiyi önce mekanik enerjiye daha sonra da elektrik enerjisine dönüştüren sistemdir. Rüzgâr türbini genellikle kule, kanatlar, rotor, dişli kutusu, generatör (alternatör), elektrik-elektronik elemanlardan oluşur. Rüzgârın kinetik enerjisi rotorda mekanik enerjiye çevrilir. Rotor milinin dönüş hareketi hızlandırılarak gövdedeki alternatöre aktarılır. Alternatörden elde edilen elektrik enerjisi aküler vasıtasıyla depolanarak veya doğrudan alıcılara ulaştırılır.  Rüzgâr türbinlerinin nasıl çalıştığını anlamak için iki önemli aerodinamik kuvvet iyi bilinmelidir. Bunlar sürükleme ve kaldırma kuvvetleridir.
+	</Rplantdesc2>
+    <Rplantdesc3>
+		Hidroelektrik santrali, barajda biriken su yer çekimi potansiyel enerjisi içermektedir. Su, belli bir yükseklikten düşerken, enerjinin dönüşümü prensibine göre Yerçekimi Potansiyel Enerjisi önce kinetik enerjiye daha sonra da türbin çarkına bağlı jeneratör motorunun dönmesi vasıtasıyla potansiyel elektrik enerjisine dönüşür. Buna da yenilenebilir enerji sınıfına giren hidroelektrik enerji santrali denir.
+	</Rplantdesc3>
+    <Rplantdesc4>
+		Biyoyakıtlar kısa süre önce yaşamış organizmalar ya da onların metabolik çıktılarından elde edilir. Petrol, kömür gibi doğal yakıtlar ya da nükleer yakıtlardan farklı olarak, yenilenebilir enerji kaynağıdırlar. Biyoyakıtların bir diğer tanımı ise, "içeriklerinin hacim olarak en az %80'ni son on yıl içerisinde toplanmış canlı organizmalardan elde edilmiş her türlü yakıt"tır. Biyokütleler de, petrol ve kömür gibi, güneş enerjisinin depolanmış halidirler. Bitkiler güneş enerjisini fotosentez aracılığıyla tutarlar. Biyoyakıtların içerisindeki karbon, bitkilerin havadaki karbondioksiti parçalaması sonucu elde edildiği için, biyoyakıtların yakılması, dünya atmosferinde net karbondioksit artışına neden olmaz. Bu nedenle, pek çok insan, atmosferdeki karbondioksit miktarının artışına engel olabilmek için, fosil yakıtlar yerine biyoyakıtların kullanılması gerektiği görüşünü savunmaktadırlar. 
+	</Rplantdesc4>
+    <Rplantdesc5>
+		Jeotermik enerjinin kullanım amaçlı değerlendirilmesi insanoğlunun doğal yaşam sürecinin devamını sağlar. Jeotermal kaynak kısaca yer ısısı olup, yerkabuğunun çeşitli derinliklerinde birikmiş ısının oluşturduğu, kimyasallar içeren sıcak su, buhar ve gazlardır. Jeotermal enerji ise jeotermal kaynaklardan doğrudan veya dolaylı her türlü faydalanmayı kapsamaktadır. Jeotermal enerji yeni, yenilenebilir, sürdürülebilir, tükenmeyen, ucuz, güvenilir, çevre dostu, yerli ve yeşil bir enerji türüdür. Jeotermal elektrik santrallerinde, bu enerji dönüştürülerek elektrik elde edilir. 
+	</Rplantdesc5>
+    <Rplantdesc6>
+		Dalga enerjisi, denizlerde oluşan dalgaların yarattığı itme gücünden yararlanan yenilenebilir enerji kaynağıdır. Günümüzde dalga enerjisi yaygın değildir. Bunun nedeni, şiddetli fırtınalarda dalga enerjisi türbinlerinin çok zarar görmesi ve dalga oranının çok yüksek olduğu yerlerin kısıtlı oluşudur. 
+	</Rplantdesc6>	
+    <NRplantdesc1>
+		Petrol rafinerisi (kısaca rafineri olarak da adlandırılır), petrol endüstrisi'nde ham petrolün arıtılarak ve çeşitli işlemlerden geçirilerek nafta, benzin, dizel yakıtı, sıvılaştırılmış petrol gazı, asfalt, kerosen, bitüm, gudron, mazut, petrol koku ve fuel oil gibi kullanışlı ürünlere dönüştürüldüğü bir endüstriyel işlem tesisidir. Etilen ve propilen gibi petrokimyasal ham maddeler de, nafta gibi ham petrol türevleri kullanılmasına gerek kalmadan ham petrolün parçalanması yoluyla direkt olarak üretilebilir. Ham petrol genellikle bir petrol üretim tesisinde çıkarılır ve işlenir. Gelen ham petrolün ve sıvı ürünlerin depolanması için petrol rafinerilerinin yakınında genellikle birer petrol deposu bulunur. 
+	</NRplantdesc1>
+    <NRplantdesc2>
+		Birincil enerji kaynakları grubunda, fosil yakıtlar içerisinde yer alan kömür, havanın oksijeni ile doğrudan yanabilen, %50-95 arasında serbest veya bileşik karbon içeren ve ekonomik değer taşıyan tortul bir kayaçtır. Ekonomik olan bu değer onun yanabilen bir madde oluşundan, dolayısıyla enerji içermesinden kaynaklanmaktadır. Dünya birincil enerji arzı içinde ilk sırayı alan petrolü, kömür ve doğal gaz izlemektedir. İleriye yönelik yapılan tahminlerde ise kömürün enerji teminindeki payının artacağı öngörülmektedir. Kömür madenleri bu kaynağın çıkartıldığı ve işlenmek üzere hazırlandığı tesislerdir.
+	</NRplantdesc2>
+    <NRplantdesc3>
+		Doğal gaz işleme, saf doğalgazları, çeşitli metan olmayan hidrokarbonları ve sıvıları, boru hattı kalitesinde kuru doğalgaz olarak adlandırmak üzere ayırarak, ham doğalgazı temizlemek için tasarlanmış karmaşık bir endüstriyel işlemdir. Doğalgaz işleme, kuyu başında başlar. Üretim kuyularından çıkarılan ham doğalgazın bileşimi, yeraltı birikintisinin tipine, derinliğine, konumuna ve alanın jeolojisine bağlıdır. Doğalgaz işleme tesisleri, su, karbondioksit (CO2) ve hidrojen sülfür (H2S) gibi yaygın kirleticileri gidererek ham doğal gazı arındırır. Doğalgazı kirleten bazı maddeler ekonomik değere sahiptir ve ayrıca işlenir veya satılır. Tamamen operasyonel bir tesis, konut, ticari ve endüstriyel tüketiciler tarafından yakıt olarak kullanılabilen boru hattı kalitesinde kuru doğalgaz sağlar.
+	</NRplantdesc3>
+    <NRplantdesc4>
+		Nükleer santral, bir veya daha fazla sayıda nükleer reaktörün yakıt olarak radyoaktif maddeleri kullanarak ısı enerjisi bu enerjiden de elektrik enerjisinin üretildiği tesistir. Radyoaktif maddeler kullanılmasından dolayı diğer santrallerden farklı ve daha sıkı güvenlik önlemlerini, teknolojileri içerisinde barındırır.  Einstein; 1905 yılında E=mc2 formülü ile fisyon (atomun iki veya daha fazla çekirdeğe bölünmesi) sonucu açığa çıkabilecek enerji konusunda öngörüde bulunmuştu. Reaktörün merkezinde, ana madde olarak uranyum kullanılmaktadır. Uranyumun parçalanmasından sonra ortaya yüksek miktarlarda enerji çıkmaktadır. Uranyum, bu şekilde fisyon tepkimesine girer. Fisyon tepkimesi ile oluşan yüksek miktardaki enerji, su buharını yüksek sıcaklıklara kadar ısıtır. Oluşan buhar, elektrik jeneratörü türbinlerine iletilir. İletilen buhar da türbin şaftını çevirerek elektrik üretimini sağlar.
+	</NRplantdesc4>
+    <NRplantdesc5>
+		Odun yakıtı, yakılacak odun, odun kömürü, mangal kömürü, levha, pelet yakıtı ve odun talaşı gibi yakıtlardır. Bugün, odun yakıtları, katı yakıt biyokütlesinden elde edilen en büyük enerji kullanımlarından biridir. Odun yakıtı yemek pişirmek ve ısıtmak için, bazen de buhar motoru ve buhar türbinlerini beslemek için kullanılabilir. Ayrıca, ocak, soba, şömine, kamp ateşinde veya şenlik ateşinde kullanılabilir.
+	</NRplantdesc5>
+    <NRplantdesc6>
+		Yenilenebilir enerji, güneş ışığı, rüzgar, yağmur, gelgitler, dalgalar ve jeotermal ısı gibi karbon nötr doğal kaynaklardan elde edilebilen ve insan zaman ölçeğinde doğal olarak yenilenen kaynaklardan elde edilebilen enerjiye denir. Bu kaynaklar güneş enerjisi, rüzgâr enerjisi, dalga enerjisi, jeotermal enerji, hidrolik enerjisi, biyokütle enerjisi olarak sıralanabilir. Bu tür bir enerji kaynağı, yenilenmekte olduklarından çok daha hızlı kullanılan fosil yakıtların tam tersidir. Yenilenemez enerji kaynakları ise tüketim oranını koruyabilecek bir ölçekte üretilemeyen, yeniden oluşturulamayan veya yeniden kullanılamayan doğal kaynaklar (sürdürülebilir olmayan kaynak) olarak kabul edilir. Bu kaynaklar genellikle sabit miktardadır ve doğanın yeniden oluşturabileceğinden çok daha hızlı tüketilir. 
+	</NRplantdesc6>
   </Turkish>
   <English>
     <isBeingUsed>True</isBeingUsed>
@@ -554,10 +626,10 @@
 		Sir, the government has decided to invest into our city! They are asking whether we want a tax cut or some extra energy diverted to our supplies, what is our response?
 	</eventDesc3>
     <eventOpt13>
-		Tax cuts, that’s what I’m talking about! 
+		Tax cuts, that’s what I’m talking about! (+300 Gold)
 	</eventOpt13>
     <eventOpt23>
-		Free energy is always good. 
+		Free energy is always good. (+50 Energy)
 	</eventOpt23>
     <eventHead4>
 		Mayor Asks for Help!
@@ -566,10 +638,10 @@
 		Sir! Alaca City’s Mayor has contacted us, requesting immediate help for an infrastructure expansion project. It seems that the budget was not enough to continue the project, and abandoning it may have negative effects on the people. What should we do?
 	</eventDesc4>
     <eventOpt14>
-		Give him whatever he wants.
+		Give him whatever he wants. (-200 Gold, +10 Happiness)
 	</eventOpt14>
     <eventOpt24>
-		It’s his fault, he should learn to clean his mess!
+		It’s his fault, he should learn to clean his mess! (-10 Happiness)
 	</eventOpt24>
     <eventHead5>
 		Donations!
@@ -590,10 +662,10 @@
 		Sir! The people in Alaca City are protesting you! They claim that your mishandling has caused great problems within the city and demand a form of compensation. We can either pay them reparations or give them free energy. What are your orders?
 	</eventDesc6>
     <eventOpt16>
-		Pay them. With gold.
+		Pay them. With gold. (-200 Gold)
 	</eventOpt16>
     <eventOpt26>
-		Give them energy to alleviate their burdens.
+		Give them energy to alleviate their burdens. (-75 Energy)
 	</eventOpt26>
     <eventHead7>
 		Health Hazard!
@@ -602,10 +674,10 @@
 		Sir, the International Health Standards Organization has found us to be in violation of their emission restrictions! We have to either end some immediate energy investments or pay them a hefty fine. What should we do?
 	</eventDesc7>
     <eventOpt17>
-		Temporarily slow down some operations.
+		Temporarily slow down some operations. (-150 Energy)
 	</eventOpt17>
     <eventOpt27>
-		Pay them whatever they want.
+		Pay them whatever they want. (-500 Gold)
 	</eventOpt27>
     <eventHead8>
 		Health Reward!
@@ -614,10 +686,10 @@
 		Sir, the  International Health Standards Organization has sent us a message congratulating our strict adherence to their emission restrictions! They wish to reward us with either a donation, or a free energy contribution! Which one will you pick?
 	</eventDesc8>
     <eventOpt18>
-		A donation is greatly appreciated.
+		A donation is greatly appreciated. (+300 Gold)
 	</eventOpt18>
     <eventOpt28>
-		Free energy is always too good to pass up.
+		Free energy is always too good to pass up. (+75 Energy)
 	</eventOpt28>
     <eventHead9>
 		Business Begins...
@@ -626,10 +698,10 @@
 		Sir, a major business magnate has contacted us, asking us whether you will allow them to build a free petroleum refinery in our city. They aren’t asking for anything in return and claim this is a gesture of goodwill.
 	</eventDesc9>
     <eventOpt19>
-		Allow them.
+		Allow them. (1 Free Petroleum Refinery)
 	</eventOpt19>
     <eventOpt29>
-		Refuse them.
+		Refuse them. (Nothing)
 	</eventOpt29>
     <eventHead10>
 		Business Wants to Expand!
@@ -638,22 +710,22 @@
 		Sir, the business magnate we worked alongside has decided to expand its operations further in our city. They say that they can build a free coal mine in our city. How should we respond?
 	</eventDesc10>
     <eventOpt110>
-		Well, it’s free…
+		Well, it’s free… (1 Free Coal Mine)
 	</eventOpt110>
     <eventOpt210>
-		We refuse.
+		We refuse. (Nothing)
 	</eventOpt210>
     <eventHead11>
 		Business Bailout
 	</eventHead11>
     <eventDesc11>
-		Sir! The business magnate has gone bankrupt due to the shifting tendency to use renewable energies! They are willing to continue their efforts on our soil, but only a huge amount of payments can save their assets, and they will liquidate them on our refusal! What should we do?
+		Sir! The business magnate has gone bankrupt due to the shifting tendency to use renewable energies! They are willing to continue their efforts on our soil, but only a huge amount of payments can save their assets, and they will liquidate them if we refuse! What should we do?
 	</eventDesc11>
     <eventOpt111>
-		Tell them we will cover their assets.
+		Tell them we will cover their assets. (-600 Gold)
 	</eventOpt111>
     <eventOpt211>
-		They can all take their trash and go!
+		They can all take their trash and go! (lose 1 Coal Mine and Petroleum Refinery)
 	</eventOpt211>
     <eventHead12>
 		Activists Demand Change!
@@ -662,10 +734,10 @@
 		Sir, an activist group within the city have contacted us, offering their help in improving the city’s energy grid. However, they want us to shut down 3 non-renewable energy plants we are operating. How do we respond?
 	</eventDesc12>
     <eventOpt112>
-		We were planning to go green anyway.
+		We were planning to go green anyway. (-3 Random Non-Renewable Plants, +1 Random Renewable Plant)
 	</eventOpt112>
     <eventOpt212>
-		The amount they are paying is too small. No!
+		The amount they are paying is too small. No! (Nothing)
 	</eventOpt212>
     <eventHead13>
 		More Demands!
@@ -674,22 +746,22 @@
 		Sir, the activist group has organized once again to provide us with an opportunity: They are willing to help us construct a renewable energy plant provided that we remove two non-renewable energy plants. What will we say to them?
 	</eventDesc13>
     <eventOpt113>
-		We can remove two more non-renewable plants. 
+		We can remove two more non-renewable plants. (-2 Random Non-Renewable Plants, +1 Random Renewable Plant)
 	</eventOpt113>
     <eventOpt213>
-		That’s a bridge too far! No, not happening.
+		That’s a bridge too far! No, not happening. (Nothing)
 	</eventOpt213>
     <eventHead14>
 		Congratulations!
 	</eventHead14>
     <eventDesc14>
-		Sir! The city activists have sent us a congratulatory letter thanking us for all our efforts to help the city go green. They want to express their gratitude by either constructing a free solar energy plant, or distribute pamphlets across the city telling of your wisdom. What shall we tell them?
+		Sir! The city activists have sent us a congratulatory letter thanking us for all our efforts to help the city go green. They want to express their gratitude by either constructing 2 free solar energy plants, or distribute pamphlets across the city telling of your wisdom. What shall we tell them?
 	</eventDesc14>
     <eventOpt114>
-		A free energy plant is what we need.
+		A free energy plant is what we need. (2 Free Solar Panels)
 	</eventOpt114>
     <eventOpt214>
-		I wouldn’t mind happier citizens.
+		I wouldn’t mind happier citizens. (+25 Happiness)
 	</eventOpt214>
     <eventHead15>
 		Budget Meltdown!
@@ -698,10 +770,10 @@
 		 Sir, your latest decisions seem to have caused an imminent decrease in our budget! We must either liquidate some assets immediately or sell our energy to increase our money, lest we risk bankruptcy! 
 	</eventDesc15>
     <eventOpt115>
-		Destroy some buildings!
+		Destroy some buildings! (Lose 3 Random Buildings, +500 Gold)
 	</eventOpt115>
     <eventOpt215>
-		Sell energy, now!
+		Sell energy, now! (-200 Energy, +500 Gold)
 	</eventOpt215>
     <eventHead16>
 		Energy Crisis!
@@ -710,10 +782,10 @@
 		Sir, we are facing an energy crisis! We simply cannot power up the city anymore. We must either import energy immediately or sell our buildings to energy firms so that they can supply us with immediate energy!
 	</eventDesc16>
     <eventOpt116>
-		Import energy!
+		Import energy! (-600 Gold, +300 Energy)
 	</eventOpt116>
     <eventOpt216>
-		Sell the buildings!
+		Sell the buildings! (Lose 3 Random Buildings, +300 Energy)
 	</eventOpt216>
     <cityStatHeader>
 		Important Statistics of the City:
@@ -736,5 +808,77 @@
     <ImmigrationPull>
 		Immigration Pull:
 	</ImmigrationPull>
+    <Rplantname1>
+		Solar Panels
+	</Rplantname1>
+    <Rplantname2>
+		Wind Turbines
+	</Rplantname2>
+    <Rplantname3>
+		Hydroelectric Plants
+	</Rplantname3>
+    <Rplantname4>
+		Biofuel Plants
+	</Rplantname4>
+    <Rplantname5>
+		Geothermal Plants
+	</Rplantname5>
+    <Rplantname6>
+		Seawave Energy Converters
+	</Rplantname6>
+    <NRplantname1>
+		Petroleum Refineries
+	</NRplantname1>
+    <NRplantname2>
+		Coal Mines
+	</NRplantname2>
+    <NRplantname3>
+		Natural-Gas Plants
+	</NRplantname3>
+    <NRplantname4>
+		Nuclear Energy Plants
+	</NRplantname4>
+    <NRplantname5>
+		Wood Fuel Plants
+	</NRplantname5>
+    <NRplantname6>
+		Renewable and Non-Renewable Energies
+	</NRplantname6>
+    <Rplantdesc1>
+		A solar panel is a device that converts sunlight into electricity by using photovoltaic (PV) cells. PV cells are made of materials that generate electrons when exposed to light. The electrons flow through a circuit and produce direct current (DC) electricity, which can be used to power various devices or stored in batteries. Solar panels are also known as solar cell panels, solar electric panels, or PV modules.  Solar panels are usually arranged in groups called arrays or systems. Some advantages of solar panels are that they use a renewable and clean source of energy, reduce greenhouse gas emissions, and lower electricity bills. Some disadvantages are that they depend on the availability and intensity of sunlight, require maintenance and cleaning, and have high initial costs.
+	</Rplantdesc1>
+    <Rplantdesc2>
+		A wind turbine is a device that converts the kinetic energy of wind into electrical energy. As of 2020, hundreds of thousands of large turbines, in installations known as wind farms, were generating over 650 gigawatts of power, with 60 GW added each year. Wind turbines are an increasingly important source of intermittent renewable energy, and are used in many countries to lower energy costs and reduce reliance on fossil fuels. One study claimed that, as of 2009, wind had the "lowest relative greenhouse gas emissions, the least water consumption demands and the most favorable social impacts" compared to photovoltaic, hydro, geothermal, coal and gas energy sources.
+	</Rplantdesc2>
+    <Rplantdesc3>
+		Hydroelectricity, or hydroelectric power, is electricity generated from hydropower (water power). Hydropower supplies one sixth of the world's electricity, almost 4500 TWh in 2020, which is more than all other renewable sources combined and also more than nuclear power. Hydropower can provide large amounts of low-carbon electricity on demand, making it a key element for creating secure and clean electricity supply systems.Once a hydroelectric complex is constructed, it produces no direct waste, and almost always emits considerably less greenhouse gas than fossil fuel-powered energy plants. However, when constructed in lowland rainforest areas, where part of the forest is inundated, substantial amounts of greenhouse gases may be emitted.
+	</Rplantdesc3>
+    <Rplantdesc4>
+		Biofuel is a fuel that is produced over a short time span from biomass, rather than by the very slow natural processes involved in the formation of fossil fuels, such as oil. Biofuel can be produced from plants or from agricultural, domestic or industrial biowaste. The climate change mitigation potential of biofuel varies considerably, from emission levels comparable to fossil fuels in some scenarios to negative emissions in others. Biofuels are mostly used for transportation, but can also be used for heating and electricity. Biofuels (and bioenergy in general) are regarded as a renewable energy source.
+	</Rplantdesc4>
+    <Rplantdesc5>
+		Geothermal energy is the thermal energy in the Earth's crust which originates from the formation of the planet and from radioactive decay of materials. The high temperature and pressure in Earth's interior cause some rock to melt and solid mantle to behave plastically. This results in parts of the mantle convecting upward since it is lighter than the surrounding rock. Temperatures at the core–mantle boundary can reach over 4000 °C (7200 °F). geothermal power, the term used for generation of electricity from geothermal energy, has gained in importance. It is estimated that the earth's geothermal resources are theoretically more than adequate to supply humanity's energy needs, although only a very small fraction is currently being profitably exploited, often in areas near tectonic plate boundaries. 
+	</Rplantdesc5>
+    <Rplantdesc6>
+		Wave power is the capture of energy of wind waves to do useful work – for example, electricity generation, water desalination, or pumping water. A machine that exploits wave power is a wave energy converter (WEC).  Waves are generated by wind passing over the sea's surface. As long as the waves propagate slower than the wind speed just above, energy is transferred from the wind to the waves. Air pressure differences between the windward and leeward sides of a wave crest and surface friction from the wind cause shear stress and wave growth. Wave power is distinct from tidal power, which captures the energy of the current caused by the gravitational pull of the Sun and Moon. Other forces can create currents, including breaking waves, wind, the Coriolis effect, cabbeling, and temperature and salinity differences.  As of 2022, wave power is not widely employed for commercial applications, after a long series of trial projects. Attempts to use this energy began in 1890 or earlier, mainly due to its high power density. Just below the ocean's water surface the wave energy flow, in time-average, is typically five times denser than the wind energy flow 20 m above the sea surface, and 10 to 30 times denser than the solar energy flow.
+	</Rplantdesc6>	
+    <NRplantdesc1>
+		An oil refinery or petroleum refinery is an industrial process plant where petroleum (crude oil) is transformed and refined into useful products such as gasoline (petrol), diesel fuel, asphalt base, fuel oils, heating oil, kerosene, liquefied petroleum gas and petroleum naphtha. Petrochemicals feedstock like ethylene and propylene can also be produced directly by cracking crude oil without the need of using refined products of crude oil such as naphtha. The crude oil feedstock has typically been processed by an oil production plant. There is usually an oil depot at or near an oil refinery for the storage of incoming crude oil feedstock as well as bulk liquid products.
+	</NRplantdesc1>
+    <NRplantdesc2>
+		Coal mining is the process of extracting coal from the ground or from a mine. Coal is valued for its energy content and since the 1880s has been widely used to generate electricity. Steel and cement industries use coal as a fuel for extraction of iron from iron ore and for cement production.Coal mining has had many developments in recent years, from the early days of men tunneling, digging and manually extracting the coal on carts to large open-cut and longwall mines. Mining at this scale requires the use of draglines, trucks, conveyors, hydraulic jacks and shearers. The coal mining industry has a long history of significant negative environmental impacts on local ecosystems, health impacts on local communities and workers, and contributes heavily to the global environmental crises, such as poor air quality and climate change. For these reasons, coal has been one of the first fossil fuels to be phased out of various parts of the global energy economy.
+	</NRplantdesc2>
+    <NRplantdesc3>
+		Natural-gas processing is a range of industrial processes designed to purify raw natural gas by removing contaminants such as solids, water, carbon dioxide (CO2), hydrogen sulfide (H2S), mercury and higher molecular mass hydrocarbons (condensate) to produce pipeline quality dry natural gas for pipeline distribution and final use. Some of the substances which contaminate natural gas have economic value and are further processed or sold. Raw natural gas comes primarily from three types of wells: crude oil wells, gas wells, and condensate wells. Crude oil and natural gas are often found together in the same reservoir.
+	</NRplantdesc3>
+    <NRplantdesc4>
+		A nuclear power plant (NPP) is a thermal power station in which the heat source is a nuclear reactor. As is typical of thermal power stations, heat is used to generate steam that drives a steam turbine connected to a generator that produces electricity. As of 2022, the International Atomic Energy Agency reported there were 422 nuclear power reactors in operation in 32 countries around the world, and 57 nuclear power reactors under construction. Nuclear plants are very often used for base load since their operations, maintenance, and fuel costs are at the lower end of the spectrum of costs. However, building a nuclear power plant often spans five to ten years, which can accrue to significant financial costs, depending on how the initial investments are financed. Nuclear power plants have a carbon footprint comparable to that of renewable energy such as solar farms and wind farms, and much lower than fossil fuels such as natural gas and brown coal. Despite some spectacular catastrophes, nuclear power plants are among the safest mode of electricity generation, comparable to solar and wind power plants.
+	</NRplantdesc4>
+    <NRplantdesc5>
+		Wood fuel (or fuelwood) is a fuel such as firewood, charcoal, chips, sheets, pellets, and sawdust. The particular form used depends upon factors such as source, quantity, quality and application. In many areas, wood is the most easily available form of fuel, requiring no tools in the case of picking up dead wood, or few tools, although as in any industry, specialized tools, such as skidders and hydraulic wood splitters, have been developed to mechanize production. Sawmill waste and construction industry by-products also include various forms of lumber tailings. 
+	</NRplantdesc5>
+    <NRplantdesc6>
+		Renewable energy is energy that can be obtained from carbon neutral natural sources such as sunlight, wind, rain, tides, waves and geothermal heat and is available from sources that are naturally replenished over the human time scale. These resources can be listed as solar energy, wind energy, wave energy, geothermal energy, hydraulic energy, biomass energy. This type of energy source is the opposite of fossil fuels, which are used much faster than they are being regenerated. Non-renewable energy resources, on the other hand, are considered natural resources (non-sustainable resource) that cannot be produced, regenerated or reused at a scale that can maintain the rate of consumption. These resources are usually in fixed amount and are consumed much faster than nature can regenerate.
+	</NRplantdesc6>
   </English>
 </Language>

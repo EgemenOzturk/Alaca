@@ -22,7 +22,7 @@
   <event4ResE>0</event4ResE>
   <event5ResE>0</event5ResE>
   <event6ResE>0</event6ResE>
-  <event7ResE>-75</event7ResE>
+  <event7ResE>-150</event7ResE>
   <event8ResE>0</event8ResE>
   <event9ResE>0</event9ResE>
   <event10ResE>0</event10ResE>
@@ -80,7 +80,7 @@
   <event11ResM>0</event11ResM>
   <event12ResM>Remove 3 Non-Renewables, get 2 Renewables</event12ResM>
   <event13ResM>Remove 2 Non-Renewables, get 1 Renewable</event13ResM>
-  <event14ResM>1 Free Solar Panel</event14ResM>
+  <event14ResM>2 Free Solar Panels</event14ResM>
   <event15ResM>Remove 3 buildings</event15ResM>
   <event16ResM>0</event16ResM>
   
@@ -97,7 +97,7 @@
   <event11O2ResM>Remove 2 buildings</event11O2ResM>
   <event12O2ResM>0</event12O2ResM>
   <event13O2ResM>0</event13O2ResM>
-  <event14O2ResM>+10 Happiness</event14O2ResM>
+  <event14O2ResM>+25 Happiness</event14O2ResM>
   <event15O2ResM>0</event15O2ResM>
   <event16O2ResM>Remove 3 buildings</event16O2ResM>
 </event>

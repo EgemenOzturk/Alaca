@@ -41,7 +41,7 @@ namespace geyikgames.unity.popup
             {
                 if(mydoc2.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
                 {
-                    achievementTitle.GetComponent<UnityEngine.UI.Text>().text = "Baþarýmlar";
+                    achievementTitle.GetComponent<UnityEngine.UI.Text>().text = "Ba?ar?mlar";
                     for (int i = 0; i < nodelist.Count; i++)
                     {
                         XmlNode node = nodelist[i];

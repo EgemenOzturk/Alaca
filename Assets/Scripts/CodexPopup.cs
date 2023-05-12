@@ -10,6 +10,8 @@ namespace geyikgames.unity.popup
 {
     public class CodexPopup : Popup
     {
+        [SerializeField] public GameObject[] renNames;
+        [SerializeField] public GameObject[] nonRenNames;
         [SerializeField] public GameObject listRenewable;
         [SerializeField] public GameObject listNonRenewable;
         [SerializeField] public GameObject textRenewable;
@@ -44,6 +46,12 @@ namespace geyikgames.unity.popup
                     textNonRenewable.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/textNonRenewable").InnerText.Trim();
                     switchButton.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/switchButton").InnerText.Trim();
                     codexHeader.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/codexHeader").InnerText.Trim();
+
+                    for(int x = 1; x < 7; x++)
+                    {
+                        renNames[x - 1].GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/R" + "plantname" + x).InnerText.Trim();
+                        nonRenNames[x - 1].GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/NR" + "plantname" + x).InnerText.Trim();
+                    }
                 }
                 else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
                 {
@@ -51,6 +59,12 @@ namespace geyikgames.unity.popup
                     textNonRenewable.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/textNonRenewable").InnerText.Trim();
                     switchButton.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/switchButton").InnerText.Trim();
                     codexHeader.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/codexHeader").InnerText.Trim();
+
+                    for (int x = 1; x < 7; x++)
+                    {
+                        renNames[x-1].GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/R" + "plantname" + x).InnerText.Trim();
+                        nonRenNames[x-1].GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/NR" + "plantname" + x).InnerText.Trim();
+                    }
                 }
             }
         }
@@ -84,7 +98,7 @@ namespace geyikgames.unity.popup
 
             Debug.Log("Click event. Action: " + action);
 
-            if(action == 1 && clickedAt % 2 == 0)
+            if (action == 1 && clickedAt % 2 == 0)
             {
                 listNonRenewable.SetActive(true);
                 listRenewable.SetActive(false);
@@ -95,6 +109,21 @@ namespace geyikgames.unity.popup
                 listNonRenewable.SetActive(false);
                 listRenewable.SetActive(true);
                 clickedAt++;
+            }
+
+            if (action < 8 && action > 1)
+            {
+                PopupController.Instance.Open<OpenLorePopup>("OpenLore", (popup) =>
+                {
+                    popup.Initialize(action, true);
+                });
+            }
+            else if (action < 14 && action > 7)
+            {
+                PopupController.Instance.Open<OpenLorePopup>("OpenLore", (popup) =>
+                {
+                    popup.Initialize(action - 6, false);
+                });
             }
         }
 

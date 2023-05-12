@@ -1,6 +1,8 @@
 <achievements>
-  <achievement name="achievement1" name2="başarım1" description="This is the first achievement" description2="Bu ilk başarım" />
-  <achievement name="achievement2" name2="başarım2" description="This is the second achievement" description2="Bu ikinci başarım" />
-  <achievement name="achievement3" name2="başarım3" description="This is the third achievement" description2="Bu üçüncü başarım" />
+  <achievement name="Start Your Adventure!" name2="Macera Başlıyor!" description="Construct your first building!" description2="İlk binanı inşa et!" />
+  <achievement name="Defend the Green!" name2="Yeşili Koru!" description="Reach 100% happiness and reduce pollution to 5%." description2="100% mutluluğa eriş ve kirliliği 5%e kadar düşür." />
+  <achievement name="Production and only Production" name2="Üretim ve yalnızca Üretim" description="Build 30 non-renewable energy plants." description2="30 adet yenilenemez enerji binası inşa et." />
+  <achievement name="A Large City" name2="Yeni bir Büyükşehir" description="Build a total of 50 buildings." description2="Toplamda 50 bina inşa et." />
+  <achievement name="End of the Line" name2="Yolun Sonu" description="Complete the story mode." description2="Hikaye modunu tamamla." />
 </achievements>
 

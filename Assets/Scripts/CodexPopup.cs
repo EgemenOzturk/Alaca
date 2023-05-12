@@ -10,6 +10,8 @@ namespace geyikgames.unity.popup
 {
     public class CodexPopup : Popup
     {
+        [SerializeField] public GameObject listRenewable;
+        [SerializeField] public GameObject listNonRenewable;
         [SerializeField] public GameObject textRenewable;
         [SerializeField] public GameObject textNonRenewable;
         [SerializeField] public GameObject switchButton;
@@ -20,8 +22,8 @@ namespace geyikgames.unity.popup
         public void Initialize()
         {
             clickedAt = 0;
-            textRenewable.SetActive(true);
-            textNonRenewable.SetActive(false);
+            listRenewable.SetActive(true);
+            listNonRenewable.SetActive(false);
         }
 
         public override void Opening()
@@ -84,14 +86,14 @@ namespace geyikgames.unity.popup
 
             if(action == 1 && clickedAt % 2 == 0)
             {
-                textNonRenewable.SetActive(true);
-                textRenewable.SetActive(false);
+                listNonRenewable.SetActive(true);
+                listRenewable.SetActive(false);
                 clickedAt++;
             }
             else if (action == 1 && clickedAt % 2 == 1)
             {
-                textNonRenewable.SetActive(false);
-                textRenewable.SetActive(true);
+                listNonRenewable.SetActive(false);
+                listRenewable.SetActive(true);
                 clickedAt++;
             }
         }

@@ -7,7 +7,7 @@ using System.Xml;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-
+using System;
 
 namespace geyikgames.unity.popup
 {
@@ -15,8 +15,8 @@ namespace geyikgames.unity.popup
     {
         [SerializeField] public GameObject loreDesc;
         [SerializeField] public GameObject loreName;
-        private int loreId;
-        private string isRenewable;
+        public int loreId;
+        public string isRenewable;
 
         public void Initialize(int i, bool renewable)
         {
@@ -29,11 +29,6 @@ namespace geyikgames.unity.popup
             {
                 isRenewable = "NR";
             }
-        }
-
-        public override void Opening()
-        {
-            base.Opening();
 
             XmlDocument mydoc = new XmlDocument();
             mydoc.Load("Language.xml");
@@ -44,15 +39,21 @@ namespace geyikgames.unity.popup
             {
                 if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
                 {
-                    loreDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/" + isRenewable + "plantname" + loreId).InnerText.Trim();
-                    loreName.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/" + isRenewable + "plantdesc" + loreId).InnerText.Trim();
+                    Debug.Log("Language/Turkish/" + isRenewable + "plantname" + loreId);
+                    loreName.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/" + isRenewable + "plantname" + loreId).InnerText.Trim();
+                    loreDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/" + isRenewable + "plantdesc" + loreId).InnerText.Trim();
                 }
                 else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
                 {
-                    loreDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/" + isRenewable + "plantname" + loreId).InnerText.Trim();
-                    loreName.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/" + isRenewable + "plantdesc" + loreId).InnerText.Trim();
+                    loreName.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/" + isRenewable + "plantname" + loreId).InnerText.Trim();
+                    loreDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/" + isRenewable + "plantdesc" + loreId).InnerText.Trim();
                 }
             }
+        }
+
+        public override void Opening()
+        {
+            base.Opening();
         }
 
         public override void Opened()

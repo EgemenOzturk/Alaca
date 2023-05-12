@@ -77,6 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loreDesc: {fileID: 3796339696580371947}
   loreName: {fileID: 1182021501647551803}
+  loreId: 0
+  isRenewable: 
 --- !u!1 &731716965452643438
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +278,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: geyikgames.unity.popup.StoryPopup, Assembly-CSharp
+      - m_Target: {fileID: 775089048090983514}
+        m_TargetAssemblyTypeName: geyikgames.unity.popup.OpenLorePopup, Assembly-CSharp
         m_MethodName: Clicked
         m_Mode: 3
         m_Arguments:
@@ -742,8 +744,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

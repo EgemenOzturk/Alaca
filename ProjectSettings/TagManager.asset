@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PopupLayer
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -12,13 +12,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Nature
+  - Ground
+  - Building/1x1
+  - Building/2x2
+  - Building/4x4
+  - Building/6x6
+  - Roads
   - 
   - 
   - 

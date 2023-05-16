@@ -1,6 +1,6 @@
 <build>
   <buildStats>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</buildStats>
-  <buildNewTrue>True</buildNewTrue>
+  <buildNewTrue>False</buildNewTrue>
   <buildAmount>0</buildAmount>
   <cityGreenIndex>0</cityGreenIndex>
   <Water>0</Water>

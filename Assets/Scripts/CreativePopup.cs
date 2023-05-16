@@ -78,12 +78,12 @@ namespace geyikgames.unity.popup
             if (action == 1)
             {
                 //START A FRESH CREATIVE GAME HERE
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("TownScene");
             }
             if (action == 2)
             {
                 //LOAD CREATIVE GAME DATA HERE FROM XML
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("TownScene");
             }
         }
     }

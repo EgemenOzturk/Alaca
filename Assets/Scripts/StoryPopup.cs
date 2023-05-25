@@ -90,7 +90,7 @@ namespace geyikgames.unity.popup
                     mydoc.Save("BuildData.xml");
                 }
 
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("StoryScene");
             }
             if (action == 2)
             {
@@ -108,7 +108,7 @@ namespace geyikgames.unity.popup
                         mydoc.Save("BuildData.xml");
                     }
 
-                    SceneManager.LoadScene("GameScene");
+                    SceneManager.LoadScene("StoryScene");
                 }
                 else
                 {

@@ -1,7 +1,7 @@
 <build>
   <buildStats>
   </buildStats>
-  <buildNewTrue>False</buildNewTrue>
+  <buildNewTrue>True</buildNewTrue>
   <buildAmount>0</buildAmount>
   <cityGreenIndex>0</cityGreenIndex>
   <Water>0</Water>
@@ -10,4 +10,7 @@
   <Happiness>0</Happiness>
   <ImmigrationPull>0</ImmigrationPull>
   <LifeExpectancy>0</LifeExpectancy>
+  <daySet>2.332169</daySet>
+  <monthSet>3</monthSet>
+  <yearSet>2025</yearSet>
 </build>

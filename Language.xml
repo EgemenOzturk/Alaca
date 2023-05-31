@@ -1,6 +1,6 @@
 <Language>
   <Turkish>
-    <isBeingUsed>True</isBeingUsed>
+    <isBeingUsed>False</isBeingUsed>
     <lngtext>
 		Türkçe
 	</lngtext>
@@ -435,7 +435,7 @@
 	</NRplantdesc6>
   </Turkish>
   <English>
-    <isBeingUsed>False</isBeingUsed>
+    <isBeingUsed>True</isBeingUsed>
     <lngtext>
 		English
 	</lngtext>

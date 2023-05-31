@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
 using UnityEngine.SocialPlatforms;
+using Unity.VisualScripting;
 
 namespace geyikgames.unity.popup
 {
@@ -24,6 +25,11 @@ namespace geyikgames.unity.popup
 
         public void Initialize()
         {
+        }
+
+        public void kill()
+        {
+            Destroy(this);
         }
 
         public override void Opening()

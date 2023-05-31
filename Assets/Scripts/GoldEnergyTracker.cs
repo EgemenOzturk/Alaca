@@ -5,11 +5,12 @@ using TMPro;
 
 public class GoldEnergyTracker : MonoBehaviour
 {
-    [SerializeField] public TextMeshProUGUI goldText; //sonra deðiþtir
-    [SerializeField] public TextMeshProUGUI energyText; //sonra deðiþtir
+    [SerializeField] public TextMeshProUGUI goldText; 
+    [SerializeField] public TextMeshProUGUI energyText;
 
     void Update()
     {
+
         readGoldEnergy();
     }
 

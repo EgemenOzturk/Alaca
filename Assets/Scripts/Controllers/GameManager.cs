@@ -1,9 +1,13 @@
+using geyikgames.unity.popup;
 using SVS;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Xml;
+using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using Vector3 = UnityEngine.Vector3;
 
 public class GameManager : MonoBehaviour
@@ -23,7 +27,64 @@ public class GameManager : MonoBehaviour
 
     private int sentinel = 0;
     private int sentinel2 = 0;
+    int oldMonth = 0;
 
+
+    [SerializeField] public GameObject timerText;
+    [SerializeField] public InGameUIController gameUICont;
+    [SerializeField] public GameObject box1;
+    [SerializeField] public GameObject box2;
+    [SerializeField] public GameObject box3;
+    [SerializeField] public GameObject cancelB;
+    public float dayCount;
+    public int monthCount;
+    public int yearCount;
+    private int i;
+
+    public void UpdateTimerUI()
+    {
+        //set timer UI
+        dayCount += Time.deltaTime;
+
+        if (monthCount != oldMonth)
+        {
+            Debug.Log(dayCount + "NIG");
+            i = UnityEngine.Random.Range(0, 16);
+            PopupController.Instance.Open<TestEventPopup>("TestEventPopup", (popup) =>
+            {
+                popup.Initialize(i);
+            });
+            oldMonth++;
+        }
+
+        XmlDocument mydoc = new XmlDocument();
+        mydoc.Load("BuildData.xml");
+        XmlNodeList nodelist = mydoc.SelectNodes("build");
+        nodelist = nodelist[0].ChildNodes;
+
+        if (nodelist.Count > 0)
+        {
+            mydoc.SelectSingleNode("build/daySet").InnerText = dayCount.ToString();
+            mydoc.SelectSingleNode("build/monthSet").InnerText = monthCount.ToString();
+            mydoc.SelectSingleNode("build/yearSet").InnerText = yearCount.ToString();
+            mydoc.Save("BuildData.xml");
+        }
+
+        timerText.GetComponent<TMP_Text>().text = "Year:" + yearCount + "   Month:" + (monthCount + 1) + "   Day:" + (int)(dayCount);
+        if (dayCount >= 30)
+        {
+            monthCount++;
+            dayCount %= 30;
+        }
+        else if (monthCount >= 12)
+        {
+            yearCount++;
+            monthCount %= 12;
+        }
+
+        if(oldMonth >= 12)
+            oldMonth %= 12;
+    }
 
     public StructurePrefabWeighted windmillPrefab, solarPanelPrefab, small_power_plant_2x2_Prefab, NuclearPowerPlantPrefab,
         NuclearPowerPlant2Prefab, PottedPowerPlantPrefab, CoalPowerPlantPrefab,GeotermalPowerPlantPrefab, GeotermalPowerPlantUnderPrefab, 
@@ -31,10 +92,35 @@ public class GameManager : MonoBehaviour
         House1Prefab, House2Prefab, House3Prefab, Apartment2Prefab;
     private void Awake()
     {
-        PlayerPrefs.SetInt("Money", 1000);
+        XmlDocument mydoc = new XmlDocument();
+        mydoc.Load("BuildData.xml");
+        XmlNodeList nodelist = mydoc.SelectNodes("build");
+        nodelist = nodelist[0].ChildNodes;
+
+        if (nodelist.Count > 0)
+        {
+            dayCount = float.Parse(mydoc.SelectSingleNode("build/daySet").InnerText.Trim());
+            monthCount = int.Parse(mydoc.SelectSingleNode("build/monthSet").InnerText.Trim());
+            yearCount = int.Parse(mydoc.SelectSingleNode("build/yearSet").InnerText.Trim());
+            oldMonth = (int.Parse(mydoc.SelectSingleNode("build/monthSet").InnerText.Trim()) - 1) % 12;
+        }
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            //mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            //mydoc2.Save("GoldEnergy.xml");
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText));
+        }
+
         if (PlayerPrefs.HasKey("Money"))
         {
-            PlayerPrefs.SetInt("Money", 1000);
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText));
         }
         if (PlayerPrefs.HasKey("Pollution"))
         {
@@ -103,6 +189,22 @@ public class GameManager : MonoBehaviour
     {
         sentinel++;
         ClearInputActions();
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            //mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            //mydoc2.Save("GoldEnergy.xml");
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 5);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
+
         if (sentinel > 1)
             previewSystem.StopShowingPreview();
         inputManager.OnMouseClick += HandleMouseClick;
@@ -114,10 +216,16 @@ public class GameManager : MonoBehaviour
     {
         sentinel++;
         ClearInputActions();
+
         if (sentinel > 1)
             previewSystem.StopShowingPreview();
         previewSystem.StartShowingPlacementPreview(windmillPrefab.prefab, windmillPrefab.area);
-        inputManager.OnMouseClick += structureManager.PlaceWindmill;
+
+        if(PlayerPrefs.GetInt("Money") - 100 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.PlaceWindmill;
+        }
+
 
     }
     private void SolarPanelPlacementHandler()
@@ -127,7 +235,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(solarPanelPrefab.prefab, solarPanelPrefab.area);
-        inputManager.OnMouseClick += structureManager.PlaceSolarPanel;
+        if (PlayerPrefs.GetInt("Money") - 200 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.PlaceSolarPanel;
+        }
 
     }
     private void small_power_plant_2x2_PlacementHandler()
@@ -137,7 +248,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(small_power_plant_2x2_Prefab.prefab,small_power_plant_2x2_Prefab.area);
-        inputManager.OnMouseClick += structureManager.small_power_plant_2x2_Panel;
+        if (PlayerPrefs.GetInt("Money") - 400 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.small_power_plant_2x2_Panel;
+        }
     }
     private void NuclearPowerPlantPlacementHandler()
     {
@@ -146,7 +260,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(NuclearPowerPlantPrefab.prefab,NuclearPowerPlantPrefab.area);
-        inputManager.OnMouseClick += structureManager.NuclearPowerPlantPanel;
+        if (PlayerPrefs.GetInt("Money") - 1000 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.NuclearPowerPlantPanel;
+        }
     }
     private void NuclearPowerPlant2PlacementHandler()
     {
@@ -155,7 +272,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(NuclearPowerPlant2Prefab.prefab,NuclearPowerPlant2Prefab.area);
-        inputManager.OnMouseClick += structureManager.NuclearPowerPlant2Panel;
+        if (PlayerPrefs.GetInt("Money") - 1200 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.NuclearPowerPlant2Panel;
+        }
     }
     private void PottedPowerPlant2PlacementHandler()
     {
@@ -164,7 +284,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(PottedPowerPlantPrefab.prefab,PottedPowerPlantPrefab.area);
-        inputManager.OnMouseClick += structureManager.PottedPowerPlant2Panel;
+        if (PlayerPrefs.GetInt("Money") - 500 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.PottedPowerPlant2Panel;
+        }
     }
     private void CoalPowerPlant2PlacementHandler()
     {
@@ -173,7 +296,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(CoalPowerPlantPrefab.prefab,CoalPowerPlantPrefab.area,true);
-        inputManager.OnMouseClick += structureManager.CoalPowerPlant2Panel;
+        if (PlayerPrefs.GetInt("Money") - 400 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.CoalPowerPlant2Panel;
+        }
     }
     private void WawePanelPlacementHandler()
     {
@@ -182,7 +308,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(WawePanelPrefab.prefab,WawePanelPrefab.area);
-        inputManager.OnMouseClick += structureManager.WawePanel;
+        if (PlayerPrefs.GetInt("Money") - 300 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.WawePanel;
+        }
     }
     
     private void GeotermalPowerPlantPlacementHandler()
@@ -192,7 +321,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(GeotermalPowerPlantPrefab.prefab, GeotermalPowerPlantPrefab.area);
-        inputManager.OnMouseClick += structureManager.GeotermalPowerStation;
+        if (PlayerPrefs.GetInt("Money") - 600 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.GeotermalPowerStation;
+        }
     }
     private void GeotermalPowerPlantUnderPlacementHandler()
     {
@@ -201,7 +333,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(GeotermalPowerPlantUnderPrefab.prefab, GeotermalPowerPlantUnderPrefab.area);
-        inputManager.OnMouseClick += structureManager.GeotermalPowerStationUnder;
+        if (PlayerPrefs.GetInt("Money") - 600 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.GeotermalPowerStationUnder;
+        }
     }
     private void HydroElectricPanelPlacement()
     {
@@ -210,7 +345,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(HydroElectricPrefab.prefab,HydroElectricPrefab.area);
-        inputManager.OnMouseClick += structureManager.HydroElectricPanel;
+        if (PlayerPrefs.GetInt("Money") - 800 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.HydroElectricPanel;
+        }
     }
     private void Tree1PanelPlacement()
     {
@@ -219,7 +357,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(Tree1Prefab.prefab, Tree1Prefab.area);
-        inputManager.OnMouseClick += structureManager.Tree1;
+        if (PlayerPrefs.GetInt("Money") - 10 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.Tree1;
+        }
     }
     private void Tree2PanelPlacement()
     {
@@ -228,7 +369,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(Tree2Prefab.prefab, Tree2Prefab.area);
-        inputManager.OnMouseClick += structureManager.Tree2;
+        if (PlayerPrefs.GetInt("Money") - 10 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.Tree2;
+        }
     }
     private void Tree3PanelPlacement()
     {
@@ -237,7 +381,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(Tree3Prefab.prefab, Tree3Prefab.area);
-        inputManager.OnMouseClick += structureManager.Tree3;
+        if (PlayerPrefs.GetInt("Money") - 10 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.Tree3;
+        }
     }
     private void Tree4PanelPlacement()
     {
@@ -246,7 +393,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(Tree4Prefab.prefab, Tree4Prefab.area);
-        inputManager.OnMouseClick += structureManager.Tree4;
+        if (PlayerPrefs.GetInt("Money") - 10 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.Tree4;
+        }
     }
     private void Tree5PanelPlacement()
     {
@@ -255,7 +405,10 @@ public class GameManager : MonoBehaviour
             previewSystem.StopShowingPreview();
         ClearInputActions();
         previewSystem.StartShowingPlacementPreview(Tree5Prefab.prefab, Tree5Prefab.area);
-        inputManager.OnMouseClick += structureManager.Tree5;
+        if (PlayerPrefs.GetInt("Money") - 10 >= 0)
+        {
+            inputManager.OnMouseClick += structureManager.Tree5;
+        }
     }
     private void FlatHouse1PanelPlacement()
     {
@@ -324,6 +477,20 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        UpdateTimerUI();
+
+        if (box1.activeSelf == false && box2.activeSelf == false && box3.activeSelf == false)
+            cancelB.SetActive(false);
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText));
+
         cameraMovement.MoveCamera(
             new Vector3(
                 inputManager.CameraMovementVector.x,

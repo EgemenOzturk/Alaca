@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Xml;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -65,71 +66,266 @@ public class StructureManager : MonoBehaviour
     }
     public void PlaceWindmill(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 100);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(windmillPrefab,windmillData,position);
     }
     internal void PlaceSolarPanel(Vector3Int position)
     {
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 200);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(solarPanelPrefab,solarPanelData,position);
     }
 
     internal void small_power_plant_2x2_Panel(Vector3Int position)
     {
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 400);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(small_power_plant_2x2_Prefab,smallPowerPlantData,position);
     }
 
     internal void NuclearPowerPlantPanel(Vector3Int position)
     {
+
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 1000);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(NuclearPowerPlantPrefab,nuclearPowerPlantData,position);
     }
 
     internal void NuclearPowerPlant2Panel(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 1200);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(NuclearPowerPlant2Prefab,nuclearPowerPlant2Data, position);
     }
     internal void CoalPowerPlant2Panel(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 400);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(CoalPowerPlantPrefab,coalPowerPlantData,position);
     }
    
     internal void PottedPowerPlant2Panel(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 500);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(PottedPowerPlantPrefab,pottedPowerPlantData,position);
     }
 
     internal void WawePanel(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 300);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForSea(WawePanelPrefab,wawePanelData,position);
     }
     internal void GeotermalPowerStation(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 600);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(GeotermalPowerStationPrefab, geotermalPowerStation, position);
     }
     internal void GeotermalPowerStationUnder(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 600);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(GeotermalPowerStationUnderPrefab, geotermalPowerStationUnder, position);
     }
     internal void HydroElectricPanel(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 800);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForStream(HydroElectricPrefab,hydroElectricData,position);
     }
     internal void Tree1(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 10);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(Tree1Prefab,treeData, position);
     }
     internal void Tree2(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 10);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(Tree2Prefab, treeData, position);
     }
     internal void Tree3(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 10);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(Tree3Prefab, treeData, position);
     }
     internal void Tree4(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 10);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(Tree4Prefab, treeData, position);
     }
     internal void Tree5(Vector3Int position)
     {
+        XmlDocument mydoc2 = new XmlDocument();
+        mydoc2.Load("GoldEnergy.xml");
+        XmlNodeList nodelist2 = mydoc2.SelectNodes("currency");
+
+        nodelist2 = nodelist2[0].ChildNodes;
+
+        if (nodelist2.Count > 0)
+        {
+            PlayerPrefs.SetInt("Money", int.Parse(mydoc2.SelectSingleNode("currency/gold").InnerText) - 10);
+            mydoc2.SelectSingleNode("currency/gold").InnerText = PlayerPrefs.GetInt("Money").ToString();
+            mydoc2.Save("GoldEnergy.xml");
+        }
         GeneralFunctionForGround(Tree5Prefab, treeData, position);
     }
     public void FlatHouse1(Vector3Int position)

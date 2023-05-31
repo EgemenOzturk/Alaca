@@ -44,6 +44,35 @@ namespace geyikgames.unity.popup
             }
         }
 
+        public void setTo(int a)
+        {
+            eventID = a;
+            XmlDocument mydoc = new XmlDocument();
+            mydoc.Load("Language.xml");
+            XmlNodeList nodelist = mydoc.SelectNodes("Language");
+            nodelist = nodelist[0].ChildNodes;
+
+            if (nodelist.Count > 0)
+            {
+                if (mydoc.SelectSingleNode("Language/Turkish/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    eventHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventHead" + eventID.ToString()).InnerText.Trim();
+                    eventDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventDesc" + eventID.ToString()).InnerText.Trim();
+                    eventOpt1.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventOpt1" + eventID.ToString()).InnerText.Trim();
+                    eventOpt2.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/Turkish/eventOpt2" + eventID.ToString()).InnerText.Trim();
+                }
+                else if (mydoc.SelectSingleNode("Language/English/isBeingUsed").InnerText.Trim().Equals("True"))
+                {
+                    eventHead.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventHead" + eventID.ToString()).InnerText.Trim();
+                    eventDesc.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventDesc" + eventID.ToString()).InnerText.Trim();
+                    eventOpt1.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventOpt1" + eventID.ToString()).InnerText.Trim();
+                    eventOpt2.GetComponent<TMP_Text>().text = mydoc.SelectSingleNode("Language/English/eventOpt2" + eventID.ToString()).InnerText.Trim();
+                }
+            }
+
+            this.gameObject.SetActive(true);
+        }
+
         void Update()
         {
 
